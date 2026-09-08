@@ -31,8 +31,8 @@ const navByType: Record<string, { href: string; label: string }[]> = {
 };
 
 const ctaByType: Record<string, { href: string; label: string }> = {
-  dental: { href: "/#enquiry", label: "Book Appointment" },
-  diagnostics: { href: "/home-collection#booking", label: "Book Home Collection" },
+  dental: { href: "/contact#enquiry", label: "Book Appointment" },
+  diagnostics: { href: "/contact#enquiry", label: "Book Home Collection" },
   portfolio: { href: "/#contact", label: "Start a project" },
 };
 

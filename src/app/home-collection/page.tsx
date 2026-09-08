@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { EnquiryForm } from "@/components/EnquiryForm";
+import { Button } from "@/components/Button";
 import { Icon } from "@/components/Icon";
 import { Marquee } from "@/components/Marquee";
 import { PageHero } from "@/components/PageHero";
@@ -127,13 +127,42 @@ export default function HomeCollectionPage() {
             direction="right"
             id="booking"
           >
-            <EnquiryForm
-              brand={site.brand}
-              contact={site.contact}
-              enquiryFields={site.enquiryFields}
-              services={site.services}
-              submitLabel={diagnostics.home.hero.bookingLabel}
-            />
+            <p className="text-xs font-extrabold uppercase tracking-[0.12em] text-[var(--color-muted)]">
+              Booking form
+            </p>
+            <h3 className="mt-4 font-[family-name:var(--font-heading-active)] text-3xl leading-tight">
+              One form. A technician calls back to confirm.
+            </h3>
+            <ul className="mt-6 grid gap-2.5 text-sm font-semibold">
+              {[
+                "Your name and mobile number",
+                "Your area in Vijayawada",
+                "The test or package you want",
+                "The collection slot that suits you",
+                "The address with a landmark",
+              ].map((item) => (
+                <li className="flex items-start gap-2.5" key={item}>
+                  <Icon className="mt-0.5 size-4 shrink-0 text-[var(--color-primary)]" name="check" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Button href="/contact#enquiry" size="lg" trailingIcon="arrowRight">
+                {diagnostics.home.hero.bookingLabel}
+              </Button>
+              <Button
+                href={`tel:${site.contact.phonePrimary.replace(/\s/g, "")}`}
+                icon="phone"
+                size="lg"
+                variant="secondary"
+              >
+                {site.contact.phonePrimary}
+              </Button>
+            </div>
+            <p className="mt-5 text-sm leading-6 text-[var(--color-muted)]">
+              Slots fill first thing in the morning. Book the night before for a 6 AM visit.
+            </p>
           </Reveal>
         </div>
       </Section>

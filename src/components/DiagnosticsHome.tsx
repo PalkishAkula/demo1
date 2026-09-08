@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Button } from "@/components/Button";
-import { EnquiryForm } from "@/components/EnquiryForm";
 import { Icon } from "@/components/Icon";
 import { LocationDetails } from "@/components/LocationDetails";
 import { Marquee } from "@/components/Marquee";
@@ -300,13 +299,33 @@ export function DiagnosticsHome({ site }: { site: SiteConfig }) {
             direction="left"
             id="booking"
           >
-            <EnquiryForm
-              brand={site.brand}
-              contact={site.contact}
-              enquiryFields={site.enquiryFields}
-              services={site.services}
-              submitLabel={home.hero.bookingLabel}
-            />
+            <p className="text-xs font-extrabold uppercase tracking-[0.12em] text-[var(--color-muted)]">
+              Booking form
+            </p>
+            <h3 className="mt-4 font-[family-name:var(--font-heading-active)] text-3xl leading-tight">
+              Tell us your area, the test and a slot.
+            </h3>
+            <ul className="mt-6 grid gap-2.5 text-sm font-semibold">
+              {[
+                "Your name and mobile number",
+                "Your area in Vijayawada",
+                "The test or package you want",
+                "The collection slot that suits you",
+              ].map((item) => (
+                <li className="flex items-start gap-2.5" key={item}>
+                  <Icon className="mt-0.5 size-4 shrink-0 text-[var(--color-primary)]" name="check" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div className="mt-7">
+              <Button href="/contact#enquiry" size="lg" trailingIcon="arrowRight">
+                {home.hero.bookingLabel}
+              </Button>
+            </div>
+            <p className="mt-5 text-sm leading-6 text-[var(--color-muted)]">
+              A technician confirms the slot on WhatsApp before they leave.
+            </p>
           </Reveal>
 
           <Reveal as="aside" className="border-l-2 border-[var(--color-accent)] pl-6" delay={120} direction="right">

@@ -4,7 +4,6 @@ import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { Button } from "@/components/Button";
 import { DiagnosticsHome } from "@/components/DiagnosticsHome";
 import { EmergencyStrip } from "@/components/EmergencyStrip";
-import { EnquiryForm } from "@/components/EnquiryForm";
 import { Footer } from "@/components/Footer";
 import { GalleryLightbox } from "@/components/GalleryLightbox";
 import { Header } from "@/components/Header";
@@ -347,12 +346,33 @@ export default function Home() {
               className="scroll-mt-28 rounded-[8px] border border-[var(--color-text)]/10 bg-white p-6 shadow-[var(--shadow-card)] lg:p-8"
               id="enquiry"
             >
-              <EnquiryForm
-                brand={site.brand}
-                contact={site.contact}
-                enquiryFields={site.enquiryFields}
-                services={site.services}
-              />
+              <p className="text-xs font-extrabold uppercase tracking-[0.12em] text-[var(--color-muted)]">
+                Appointment form
+              </p>
+              <h3 className="mt-4 font-[family-name:var(--font-heading-active)] text-3xl leading-tight">
+                Four boxes. We call you back within two hours.
+              </h3>
+              <ul className="mt-6 grid gap-2.5 text-sm font-semibold">
+                {[
+                  "Your name and mobile number",
+                  "The treatment you need",
+                  "The day that suits you",
+                  "Anything we should know before you arrive",
+                ].map((item) => (
+                  <li className="flex items-start gap-2.5" key={item}>
+                    <Icon className="mt-0.5 size-4 shrink-0 text-[var(--color-primary)]" name="check" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-7">
+                <Button href="/contact#enquiry" size="lg" trailingIcon="arrowRight">
+                  Open the appointment form
+                </Button>
+              </div>
+              <p className="mt-5 text-sm leading-6 text-[var(--color-muted)]">
+                Calling is faster if you need a slot today.
+              </p>
             </Reveal>
 
             <Reveal className="border-l-2 border-[var(--color-accent)] pl-6" delay={120} direction="right">

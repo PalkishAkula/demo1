@@ -128,6 +128,9 @@ export function EnquiryForm({
           field.name === "service" && (!field.options || field.options.length === 0)
             ? services.map((service) => service.name)
             : (field.options ?? []);
+        // A select with no options is unfillable, and it is required more often
+        // than not. Degrade it to a plain text box instead of trapping the user.
+        const isSelect = field.type === "select" && options.length > 0;
 
         return (
           <label className="grid gap-2 text-sm font-bold text-[var(--color-text)]" htmlFor={id} key={field.name}>
@@ -144,7 +147,7 @@ export function EnquiryForm({
                 placeholder={field.placeholder}
                 required={field.required}
               />
-            ) : field.type === "select" ? (
+            ) : isSelect ? (
               <select className={fieldClasses} defaultValue="" id={id} name={field.name} required={field.required}>
                 <option disabled value="">
                   {field.placeholder ?? "Choose an option"}
@@ -166,7 +169,7 @@ export function EnquiryForm({
                 name={field.name}
                 placeholder={field.placeholder}
                 required={field.required}
-                type={field.type}
+                type={field.type === "select" ? "text" : field.type}
               />
             )}
           </label>
