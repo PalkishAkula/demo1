@@ -1,0 +1,416 @@
+@import "tailwindcss";
+
+/* --------------------------------------------------------------------------
+   Tokens. Brand colours are injected onto <html> from the site config, so
+   everything below reads from those variables and never hardcodes a hue.
+   -------------------------------------------------------------------------- */
+
+:root {
+  --color-whatsapp: #247b58;
+  --color-open: #2f7a52;
+  --color-danger: #9d2e20;
+
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.04), 0 8px 24px -12px rgb(0 0 0 / 0.14);
+  --shadow-float: 0 2px 6px rgb(0 0 0 / 0.06), 0 18px 44px -18px rgb(0 0 0 / 0.24);
+  --shadow-inset-top: inset 0 1px 0 rgb(255 255 255 / 0.12);
+
+  --dur-fast: 150ms;
+  --dur-base: 260ms;
+  --dur-slow: 420ms;
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-spring: cubic-bezier(0.22, 1.2, 0.36, 1);
+
+  --header-h: 4.5rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-body-active);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 1rem);
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-text);
+  font-family: var(--font-body-active), system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   Focus and skip link
+   -------------------------------------------------------------------------- */
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  transform: translateY(-200%);
+  border-radius: 8px;
+  background: var(--color-primary);
+  padding: 0.75rem 1rem;
+  color: white;
+  font-weight: 700;
+  transition: transform var(--dur-base) var(--ease-spring);
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+a,
+button {
+  transition:
+    color var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out),
+    opacity var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+}
+
+button:active,
+a:active {
+  transform: translateY(1px);
+}
+
+/* Accent paint is used for rules and markers. On pale surfaces, use the
+   primary ink for readable labels and small text. */
+.bg-white .text-\[var\(--color-accent\)\],
+.bg-\[var\(--color-surface\)\] .text-\[var\(--color-accent\)\] {
+  color: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Scroll reveal. One class, driven by a data attribute the observer flips,
+   with a per-element delay for staggered groups.
+   -------------------------------------------------------------------------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+.reveal[data-reveal="left"] {
+  transform: translateX(-16px);
+}
+.reveal[data-reveal="right"] {
+  transform: translateX(16px);
+}
+.reveal[data-reveal="scale"] {
+  transform: scale(0.985);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+/* Staggered group. Delays are applied to the real children so grid and flex
+   layouts are untouched — no wrapper elements are introduced. */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out);
+}
+.stagger.is-visible > * {
+  opacity: 1;
+  transform: none;
+}
+.stagger.is-visible > *:nth-child(1) { transition-delay: calc(var(--stagger, 70ms) * 0); }
+.stagger.is-visible > *:nth-child(2) { transition-delay: calc(var(--stagger, 70ms) * 1); }
+.stagger.is-visible > *:nth-child(3) { transition-delay: calc(var(--stagger, 70ms) * 2); }
+.stagger.is-visible > *:nth-child(4) { transition-delay: calc(var(--stagger, 70ms) * 3); }
+.stagger.is-visible > *:nth-child(5) { transition-delay: calc(var(--stagger, 70ms) * 4); }
+.stagger.is-visible > *:nth-child(6) { transition-delay: calc(var(--stagger, 70ms) * 5); }
+.stagger.is-visible > *:nth-child(7) { transition-delay: calc(var(--stagger, 70ms) * 6); }
+.stagger.is-visible > *:nth-child(8) { transition-delay: calc(var(--stagger, 70ms) * 7); }
+.stagger.is-visible > *:nth-child(n + 9) { transition-delay: calc(var(--stagger, 70ms) * 8); }
+
+/* Reveals are driven by JS. With scripting off the observer never runs, so
+   show everything rather than leaving the page blank. */
+@media (scripting: none) {
+  .reveal,
+  .stagger > * {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Interaction utilities
+   -------------------------------------------------------------------------- */
+
+/* Cards lift a hair and gain a warmer border. No scale, no bounce. */
+.lift {
+  transition:
+    transform var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-base) var(--ease-out);
+}
+@media (hover: hover) {
+  .lift:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-card);
+  }
+}
+
+/* Underline that sweeps in from the left on hover. */
+.sweep {
+  background-image: linear-gradient(var(--color-accent), var(--color-accent));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 2px;
+  transition: background-size var(--dur-base) var(--ease-out);
+  padding-bottom: 2px;
+}
+.sweep:hover,
+.sweep:focus-visible {
+  background-size: 100% 2px;
+}
+
+/* Nav link with a rule that grows from the centre. */
+.navlink {
+  position: relative;
+}
+.navlink::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  height: 2px;
+  width: 0;
+  background: var(--color-accent);
+  transform: translateX(-50%);
+  transition: width var(--dur-base) var(--ease-out);
+}
+.navlink:hover::after,
+.navlink:focus-visible::after,
+.navlink[aria-current="page"]::after {
+  width: 100%;
+}
+
+/* Arrow nudges forward on hover of the parent link. */
+.nudge svg {
+  transition: transform var(--dur-base) var(--ease-spring);
+}
+.nudge:hover svg {
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   Decorative grounds — used instead of gradients to break up flat sections.
+   -------------------------------------------------------------------------- */
+
+.bg-dotgrid {
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: 22px 22px;
+  opacity: 0.08;
+}
+
+.bg-rules {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    currentColor 0 1px,
+    transparent 1px 64px
+  );
+  opacity: 0.07;
+}
+
+.bg-diagonal {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    currentColor 0 1px,
+    transparent 1px 12px
+  );
+  opacity: 0.09;
+}
+
+/* --------------------------------------------------------------------------
+   Marquee — the locality ticker. Duplicated content scrolls one full width.
+   -------------------------------------------------------------------------- */
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll var(--marquee-duration, 42s) linear infinite;
+}
+.marquee-viewport:hover .marquee {
+  animation-play-state: paused;
+}
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Accordion panel — animates height without measuring it in JS.
+   -------------------------------------------------------------------------- */
+
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--dur-base) var(--ease-out);
+}
+.panel[data-open="true"] {
+  grid-template-rows: 1fr;
+}
+.panel > div {
+  overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   Header and sticky bar transitions
+   -------------------------------------------------------------------------- */
+
+.site-header {
+  transition:
+    background-color var(--dur-base) var(--ease-out),
+    border-color var(--dur-base) var(--ease-out),
+    box-shadow var(--dur-base) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+}
+
+.mobile-bar {
+  transition: transform var(--dur-base) var(--ease-out);
+}
+.mobile-bar[data-hidden="true"] {
+  transform: translateY(110%);
+}
+
+/* Top-of-page scroll progress rule. */
+.scroll-progress {
+  transform-origin: 0 50%;
+  transform: scaleX(var(--progress, 0));
+  transition: transform 90ms linear;
+}
+
+/* --------------------------------------------------------------------------
+   Lightbox
+   -------------------------------------------------------------------------- */
+
+.lightbox {
+  animation: fade-in var(--dur-base) var(--ease-out) both;
+}
+.lightbox figure {
+  animation: pop-in var(--dur-base) var(--ease-spring) both;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Drawer backdrop */
+.backdrop {
+  animation: fade-in var(--dur-fast) var(--ease-out) both;
+}
+
+/* Submit spinner */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spin {
+  animation: spin 800ms linear infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Reduced motion — everything above degrades to an instant state change.
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+  .reveal,
+  .stagger > * {
+    opacity: 1;
+    transform: none;
+  }
+  .marquee {
+    animation: none;
+    transform: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Print — the proposal route exports to a single clean A4 page.
+   -------------------------------------------------------------------------- */
+
+@media print {
+  body {
+    background: white;
+    padding: 0 !important;
+  }
+  .skip-link,
+  header,
+  footer,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .proposal {
+    padding: 0;
+  }
+  .proposal article {
+    border: 0;
+    max-width: none;
+    padding: 0;
+  }
+}

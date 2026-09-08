@@ -1,0 +1,1458 @@
+{
+  "siteId": "krishna-labs",
+  "type": "diagnostics",
+  "isDemo": true,
+  "siteUrl": "https://krishna-path-labs-demo.example",
+  "geo": {
+    "latitude": 16.5102,
+    "longitude": 80.6366
+  },
+  "priceRevisionNote": "Package and test prices revised January 2026",
+  "registrationLine": "NABL Ref. No. MC-48271 · AP Medical Council Lab Ref. No. AP-ML-11806",
+  "brand": {
+    "name": "Krishna Path Labs & Scan Centre",
+    "shortName": "Krishna Path Labs",
+    "tagline": "Reports in 6 hours. Home collection across Vijayawada.",
+    "logoText": "KP",
+    "established": "Established 2008",
+    "yearsInService": 17
+  },
+  "theme": {
+    "primary": "#12294B",
+    "primaryDark": "#0A1830",
+    "surface": "#F7F9FC",
+    "accent": "#F2A50C",
+    "text": "#111827",
+    "muted": "#6B7280",
+    "fontHeading": "Plus Jakarta Sans",
+    "fontBody": "Inter",
+    "radius": "8px"
+  },
+  "contact": {
+    "phonePrimary": "+91 98765 43210",
+    "phoneAlt": "+91 98765 43210",
+    "whatsapp": "+91 98765 43210",
+    "email": "care@krishnapathlabs.example",
+    "addressLine1": "Ground Floor, Sai Arcade, MG Road",
+    "addressLine2": "Governorpet",
+    "city": "Vijayawada",
+    "state": "Andhra Pradesh",
+    "pincode": "520002",
+    "mapEmbedUrl": "https://www.google.com/maps?q=MG+Road,+Governorpet,+Vijayawada&output=embed",
+    "mapDirectionsUrl": "https://www.google.com/maps/dir/?api=1&destination=Governorpet,+Vijayawada",
+    "landmark": "Near the Governorpet post office",
+    "parkingNote": "Free two-wheeler parking in the building; car parking on the service road.",
+    "languagesLine": "We speak Telugu, Hindi and English."
+  },
+  "hours": [
+    {
+      "day": "Monday",
+      "open": "06:30",
+      "close": "21:00"
+    },
+    {
+      "day": "Tuesday",
+      "open": "06:30",
+      "close": "21:00"
+    },
+    {
+      "day": "Wednesday",
+      "open": "06:30",
+      "close": "21:00"
+    },
+    {
+      "day": "Thursday",
+      "open": "06:30",
+      "close": "21:00"
+    },
+    {
+      "day": "Friday",
+      "open": "06:30",
+      "close": "21:00"
+    },
+    {
+      "day": "Saturday",
+      "open": "06:30",
+      "close": "21:00"
+    },
+    {
+      "day": "Sunday",
+      "open": "07:00",
+      "close": "13:00"
+    }
+  ],
+  "stats": [
+    {
+      "value": "3,20,000+",
+      "label": "tests processed"
+    },
+    {
+      "value": "17",
+      "label": "years in Governorpet"
+    },
+    {
+      "value": "4.6",
+      "label": "from 610 reviews"
+    },
+    {
+      "value": "NABL",
+      "label": "accredited processes"
+    }
+  ],
+  "services": [
+    {
+      "id": "digital-xray",
+      "name": "Digital X-ray",
+      "shortDesc": "Quick diagnostic imaging with digital reporting.",
+      "longDesc": "Digital X-rays are available for common chest, bone and joint referrals.",
+      "price": "₹500",
+      "duration": "30 minutes",
+      "featured": true,
+      "whatsappMessage": "Hi, I want to book a Digital X-ray at Krishna Path Labs. My name is:"
+    },
+    {
+      "id": "ecg",
+      "name": "ECG",
+      "shortDesc": "A resting heart rhythm recording.",
+      "longDesc": "A technician records your ECG and routes it for reporting.",
+      "price": "₹350",
+      "duration": "20 minutes",
+      "featured": true,
+      "whatsappMessage": "Hi, I want to book an ECG at Krishna Path Labs. My name is:"
+    },
+    {
+      "id": "2d-echo",
+      "name": "2D Echo",
+      "shortDesc": "Ultrasound imaging of the heart.",
+      "longDesc": "A scheduled cardiac imaging study with a specialist report.",
+      "price": "₹1,800",
+      "duration": "45 minutes",
+      "featured": true,
+      "whatsappMessage": "Hi, I want to book a 2D Echo at Krishna Path Labs. My name is:"
+    },
+    {
+      "id": "ultrasound",
+      "name": "Ultrasound",
+      "shortDesc": "Abdomen and pelvis imaging.",
+      "longDesc": "Ultrasound appointments are scheduled with preparation guidance when needed.",
+      "price": "₹1,100",
+      "duration": "30 minutes",
+      "featured": true,
+      "whatsappMessage": "Hi, I want to book an Ultrasound at Krishna Path Labs. My name is:"
+    },
+    {
+      "id": "tmt",
+      "name": "TMT",
+      "shortDesc": "Exercise-based cardiac assessment.",
+      "longDesc": "A scheduled treadmill test with preliminary safety screening.",
+      "price": "₹2,000",
+      "duration": "60 minutes",
+      "featured": false,
+      "whatsappMessage": "Hi, I want to book a TMT at Krishna Path Labs. My name is:"
+    },
+    {
+      "id": "whole-body-scan",
+      "name": "Whole Body Scan",
+      "shortDesc": "A planned imaging assessment.",
+      "longDesc": "Call before booking so the team can confirm preparation and reporting time.",
+      "price": "₹4,500",
+      "duration": "90 minutes",
+      "featured": false,
+      "whatsappMessage": "Hi, I want to book a Whole Body Scan at Krishna Path Labs. My name is:"
+    }
+  ],
+  "team": [
+    {
+      "name": "Dr. Naveen Chandra Varma",
+      "qualification": "MD (Pathology)",
+      "specialization": "Clinical pathology and laboratory quality",
+      "experience": "21 years",
+      "bio": "Dr. Naveen reviews flagged reports before they are released and keeps the reporting format clear for your doctor. He trained in pathology at Andhra Medical College, Visakhapatnam, and signs out routine and specialised laboratory work.",
+      "languages": [
+        "Telugu",
+        "English",
+        "Hindi"
+      ],
+      "photo": "/images/krishna-labs/dr-naveen-varma.jpg",
+      "education": [
+        "MBBS — Andhra Medical College, Visakhapatnam",
+        "MD Pathology — Andhra Medical College, Visakhapatnam"
+      ],
+      "memberships": [
+        "Indian Association of Pathologists and Microbiologists",
+        "Andhra Pradesh Medical Council"
+      ],
+      "treatmentFocus": [
+        "Blood diagnostics",
+        "Quality review",
+        "Preventive health panels"
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Vijaya Lakshmi",
+      "area": "Labbipet",
+      "rating": 5,
+      "date": "June 2026",
+      "text": "The technician reached our flat at 6:40 AM for my father’s fasting tests. The report arrived on WhatsApp before lunch, and the collection charge was waived as the bill crossed ₹500.",
+      "service": "Home collection"
+    },
+    {
+      "name": "Ramesh Babu",
+      "area": "Benz Circle",
+      "rating": 5,
+      "date": "May 2026",
+      "text": "I searched for a thyroid profile, booked the slot and received the report in the promised time. The ₹399 price shown at booking was the amount billed.",
+      "service": "Thyroid Profile"
+    },
+    {
+      "name": "Sowmya K.",
+      "area": "Patamata",
+      "rating": 5,
+      "date": "April 2026",
+      "text": "The home collection staff member checked my name and test list before taking the sample. She was gentle with my mother, who has difficult veins.",
+      "service": "Full Body Advanced"
+    },
+    {
+      "name": "Chandra Sekhar",
+      "area": "Ramavarappadu",
+      "rating": 4,
+      "date": "March 2026",
+      "text": "The ECG was done quickly and the counter team sent the file to WhatsApp. I waited about 16 minutes because two walk-ins arrived before my booked slot.",
+      "service": "ECG"
+    },
+    {
+      "name": "Nirmala Devi",
+      "area": "Auto Nagar",
+      "rating": 5,
+      "date": "February 2026",
+      "text": "The fever panel helped our doctor rule out dengue and malaria the same day. The staff told us clearly when to expect the typhoid result.",
+      "service": "Fever Panel"
+    }
+  ],
+  "gallery": [
+    {
+      "src": "/images/krishna-labs/lab-exterior.jpg",
+      "alt": "Krishna Path Labs entrance on MG Road",
+      "caption": "Governorpet entrance",
+      "category": "clinic"
+    },
+    {
+      "src": "/images/krishna-labs/collection-desk.jpg",
+      "alt": "Sample collection desk",
+      "caption": "Collection desk",
+      "category": "clinic"
+    },
+    {
+      "src": "/images/krishna-labs/analyser.jpg",
+      "alt": "Automated biochemistry analyser",
+      "caption": "Biochemistry analyser",
+      "category": "equipment"
+    },
+    {
+      "src": "/images/krishna-labs/xray-room.jpg",
+      "alt": "Digital X-ray room",
+      "caption": "Digital X-ray room",
+      "category": "equipment"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How soon will I receive my report?",
+      "answer": "Most routine blood reports are shared within 6 hours. Some specialised tests take longer and the team confirms that at booking."
+    }
+  ],
+  "contactFaqs": [
+    {
+      "question": "Can I walk in for a test?",
+      "answer": "Yes. Fasting and imaging tests are easier when you call first."
+    },
+    {
+      "question": "Is home collection available?",
+      "answer": "Yes, across listed Vijayawada areas from 6:00 AM."
+    },
+    {
+      "question": "Do I need a prescription?",
+      "answer": "Bring one when your doctor has given it. Routine preventive packages can be booked directly."
+    },
+    {
+      "question": "How are reports delivered?",
+      "answer": "We send the report link to your WhatsApp number after the report is verified."
+    },
+    {
+      "question": "Is parking available?",
+      "answer": "Two-wheelers can park in front of Sai Arcade. Paid car parking is on MG Road."
+    },
+    {
+      "question": "What are Sunday timings?",
+      "answer": "The centre is open from 7:00 AM to 1:00 PM on Sunday."
+    }
+  ],
+  "about": {
+    "story": [
+      "Krishna Path Labs began in Governorpet in 2008 to make routine testing easier for local families and referring doctors.",
+      "The centre added home collection across Vijayawada as more patients needed fasting samples taken before work or travel.",
+      "Today the lab combines a clear booking process with pathologist-reviewed reports."
+    ],
+    "timeline": [
+      {
+        "year": "2008",
+        "title": "Governorpet centre opens",
+        "text": "Routine pathology services begin on MG Road."
+      },
+      {
+        "year": "2012",
+        "title": "Automated analysers installed",
+        "text": "Higher-volume routine panels move to automated processing."
+      },
+      {
+        "year": "2017",
+        "title": "Home collection starts",
+        "text": "Morning slots open for Benz Circle and Labbipet."
+      },
+      {
+        "year": "2021",
+        "title": "Digital imaging added",
+        "text": "Digital X-ray and ECG services are added at the centre."
+      },
+      {
+        "year": "2025",
+        "title": "WhatsApp report delivery",
+        "text": "Patients can receive verified report links on WhatsApp."
+      }
+    ],
+    "equipment": [
+      {
+        "name": "Biochemistry analyser",
+        "text": "Processes routine liver, kidney, sugar and lipid chemistry tests."
+      },
+      {
+        "name": "Hematology analyser",
+        "text": "Measures blood cells for CBC and related investigations."
+      },
+      {
+        "name": "Digital X-ray",
+        "text": "Produces an image that can be reviewed and shared promptly."
+      },
+      {
+        "name": "ECG machine",
+        "text": "Records your resting heart rhythm in a few minutes."
+      },
+      {
+        "name": "Ultrasound unit",
+        "text": "Supports scheduled abdomen and pelvis scans."
+      },
+      {
+        "name": "Centrifuge system",
+        "text": "Prepares samples correctly before testing."
+      }
+    ]
+  },
+  "seo": {
+    "title": "Diagnostic Lab in Governorpet, Vijayawada | Krishna Path Labs",
+    "description": "Governorpet diagnostic lab with 60 listed tests, home collection and reports from ₹120.",
+    "keywords": [
+      "diagnostic lab Vijayawada",
+      "home blood collection Vijayawada",
+      "blood tests Governorpet",
+      "scan centre Vijayawada"
+    ],
+    "ogImage": "/opengraph-image"
+  },
+  "enquiryFields": [
+    {
+      "name": "name",
+      "label": "Name",
+      "type": "text",
+      "required": true,
+      "placeholder": "Your name"
+    },
+    {
+      "name": "phone",
+      "label": "Phone",
+      "type": "tel",
+      "required": true,
+      "placeholder": "10-digit mobile number"
+    },
+    {
+      "name": "area",
+      "label": "Area",
+      "type": "select",
+      "required": true,
+      "placeholder": "Choose your area",
+      "options": [
+        "Benz Circle",
+        "Governorpet",
+        "Patamata",
+        "Labbipet",
+        "Gunadala",
+        "Poranki",
+        "Ramavarappadu",
+        "Auto Nagar",
+        "Bhavanipuram",
+        "Vidyadharapuram"
+      ]
+    },
+    {
+      "name": "testOrPackage",
+      "label": "Test or package",
+      "type": "select",
+      "required": true,
+      "placeholder": "Choose a test or package",
+      "options": [
+        "Basic Health Checkup",
+        "Full Body Advanced",
+        "Diabetes Care Panel",
+        "Thyroid Profile (T3/T4/TSH)",
+        "Cardiac Risk Panel",
+        "Women's Wellness",
+        "Senior Citizen Complete",
+        "Fever Panel (Dengue/Malaria/Typhoid)",
+        "Digital X-ray",
+        "ECG",
+        "2D Echo",
+        "Ultrasound",
+        "TMT",
+        "Whole Body Scan"
+      ]
+    },
+    {
+      "name": "slot",
+      "label": "Preferred slot",
+      "type": "select",
+      "required": true,
+      "placeholder": "Choose a collection slot",
+      "options": [
+        "6–8 AM",
+        "8–10 AM",
+        "10 AM–12 PM",
+        "4–6 PM"
+      ]
+    },
+    {
+      "name": "address",
+      "label": "Address",
+      "type": "textarea",
+      "required": true,
+      "placeholder": "House or flat number, street and landmark"
+    }
+  ],
+  "diagnostics": {
+    "home": {
+      "hero": {
+        "eyebrow": "Governorpet · Since 2008",
+        "heading": "Book the test. Get the report. Keep your day moving.",
+        "subheading": "Search routine tests, book home collection across Vijayawada and receive most reports on WhatsApp within 6 hours.",
+        "bookingLabel": "Book Home Collection"
+      },
+      "collectionStrip": [
+        "Free home collection above ₹500",
+        "Morning slots from 6:00 AM",
+        "Verified reports on WhatsApp"
+      ],
+      "howItWorks": [
+        {
+          "title": "Book online or call",
+          "text": "Choose a test, package or a home collection slot."
+        },
+        {
+          "title": "Technician visits your home",
+          "text": "A trained collector confirms your name and sample list."
+        },
+        {
+          "title": "Sample reaches Governorpet",
+          "text": "The laboratory processes the sample with the right controls."
+        },
+        {
+          "title": "Report on WhatsApp",
+          "text": "Most routine reports are sent within 6 hours."
+        }
+      ],
+      "facilities": [
+        {
+          "name": "Fully automated analyser",
+          "text": "For routine chemistry panels and consistent processing.",
+          "photo": "/images/krishna-labs/facility-analyser.jpg",
+          "photoAlt": "Automated analyser processing chemistry samples at Krishna Path Labs"
+        },
+        {
+          "name": "5-part hematology analyser",
+          "text": "For detailed blood cell counts and CBC reporting.",
+          "photo": "/images/krishna-labs/facility-hematology.jpg",
+          "photoAlt": "Hematology analyser used for complete blood counts"
+        },
+        {
+          "name": "Digital X-ray",
+          "text": "For quick image capture and report sharing.",
+          "photo": "/images/krishna-labs/facility-xray.jpg",
+          "photoAlt": "Digital X-ray system in the Governorpet imaging room"
+        },
+        {
+          "name": "ECG suite",
+          "text": "For scheduled and walk-in resting ECGs.",
+          "photo": "/images/krishna-labs/facility-ecg.jpg",
+          "photoAlt": "ECG recording station at Krishna Path Labs"
+        },
+        {
+          "name": "Ultrasound room",
+          "text": "For abdomen and pelvis imaging appointments.",
+          "photo": "/images/krishna-labs/facility-ultrasound.jpg",
+          "photoAlt": "Ultrasound machine in the scheduled scan room"
+        },
+        {
+          "name": "Cold-chain collection",
+          "text": "For specimens that need controlled handling.",
+          "photo": "/images/krishna-labs/facility-collection.jpg",
+          "photoAlt": "Cold-chain collection kit for home sample transport"
+        }
+      ],
+      "corporate": {
+        "heading": "Health camps that fit your group.",
+        "text": "We organise company checkups, school camps and society camps across Vijayawada.",
+        "linkLabel": "Ask about a health camp"
+      },
+      "googleReviews": {
+        "label": "See all 610 reviews on Google",
+        "url": "https://www.google.com/search?q=Krishna+Path+Labs+Vijayawada+reviews"
+      }
+    },
+    "packages": [
+      {
+        "id": "basic-health",
+        "name": "Basic Health Checkup",
+        "testCount": 42,
+        "price": "₹899",
+        "mrp": "₹1,600",
+        "includedTests": [
+          "Haemoglobin",
+          "Total RBC Count",
+          "Total WBC Count",
+          "Platelet Count",
+          "Packed Cell Volume (PCV)",
+          "MCV",
+          "MCH",
+          "MCHC",
+          "RDW",
+          "Neutrophils",
+          "Lymphocytes",
+          "Eosinophils",
+          "Monocytes",
+          "Basophils",
+          "ESR",
+          "Peripheral Smear Examination",
+          "Absolute Neutrophil Count",
+          "Mentzer Index",
+          "Fasting Blood Sugar",
+          "Post Prandial Blood Sugar",
+          "HbA1c",
+          "Estimated Average Glucose",
+          "Random Blood Sugar",
+          "Fasting Insulin",
+          "Urine Sugar (Fasting)",
+          "Urine Sugar (Post Prandial)",
+          "Total Cholesterol",
+          "HDL Cholesterol",
+          "LDL Cholesterol",
+          "VLDL Cholesterol",
+          "Triglycerides",
+          "Total Cholesterol / HDL Ratio",
+          "LDL / HDL Ratio",
+          "Non-HDL Cholesterol",
+          "Total Bilirubin",
+          "Direct Bilirubin",
+          "Indirect Bilirubin",
+          "SGOT (AST)",
+          "SGPT (ALT)",
+          "Alkaline Phosphatase",
+          "Total Protein",
+          "Serum Albumin"
+        ],
+        "whatsappMessage": "Hi, I want to book the Basic Health Checkup at Krishna Path Labs. My name is:"
+      },
+      {
+        "id": "full-body-advanced",
+        "name": "Full Body Advanced",
+        "testCount": 72,
+        "price": "₹1,999",
+        "mrp": "₹3,400",
+        "includedTests": [
+          "Haemoglobin",
+          "Total RBC Count",
+          "Total WBC Count",
+          "Platelet Count",
+          "Packed Cell Volume (PCV)",
+          "MCV",
+          "MCH",
+          "MCHC",
+          "RDW",
+          "Neutrophils",
+          "Lymphocytes",
+          "Eosinophils",
+          "Monocytes",
+          "Basophils",
+          "ESR",
+          "Peripheral Smear Examination",
+          "Absolute Neutrophil Count",
+          "Mentzer Index",
+          "Fasting Blood Sugar",
+          "Post Prandial Blood Sugar",
+          "HbA1c",
+          "Estimated Average Glucose",
+          "Random Blood Sugar",
+          "Fasting Insulin",
+          "Urine Sugar (Fasting)",
+          "Urine Sugar (Post Prandial)",
+          "Total Cholesterol",
+          "HDL Cholesterol",
+          "LDL Cholesterol",
+          "VLDL Cholesterol",
+          "Triglycerides",
+          "Total Cholesterol / HDL Ratio",
+          "LDL / HDL Ratio",
+          "Non-HDL Cholesterol",
+          "Total Bilirubin",
+          "Direct Bilirubin",
+          "Indirect Bilirubin",
+          "SGOT (AST)",
+          "SGPT (ALT)",
+          "Alkaline Phosphatase",
+          "Total Protein",
+          "Serum Albumin",
+          "Serum Globulin",
+          "A/G Ratio",
+          "GGT",
+          "Blood Urea",
+          "Blood Urea Nitrogen",
+          "Serum Creatinine",
+          "Serum Uric Acid",
+          "eGFR",
+          "BUN / Creatinine Ratio",
+          "Serum Sodium",
+          "Serum Potassium",
+          "Serum Chloride",
+          "Serum Calcium",
+          "Serum Phosphorus",
+          "Serum Magnesium",
+          "T3 Total",
+          "T4 Total",
+          "TSH Ultrasensitive",
+          "Free T3",
+          "Free T4",
+          "Anti-TPO Antibody",
+          "Vitamin D (25-OH)",
+          "Vitamin B12",
+          "Serum Folate",
+          "Serum Iron",
+          "TIBC",
+          "Serum Ferritin",
+          "Transferrin Saturation",
+          "Urine Routine and Microscopy",
+          "Urine pH"
+        ],
+        "whatsappMessage": "Hi, I want to book the Full Body Advanced package at Krishna Path Labs. My name is:"
+      },
+      {
+        "id": "diabetes-care",
+        "name": "Diabetes Care Panel",
+        "testCount": 12,
+        "price": "₹649",
+        "mrp": "₹1,100",
+        "includedTests": [
+          "Fasting Blood Sugar",
+          "Post Prandial Blood Sugar",
+          "HbA1c",
+          "Estimated Average Glucose",
+          "Random Blood Sugar",
+          "Fasting Insulin",
+          "Urine Sugar (Fasting)",
+          "Urine Sugar (Post Prandial)",
+          "Blood Urea",
+          "Blood Urea Nitrogen",
+          "Serum Creatinine",
+          "Serum Uric Acid"
+        ],
+        "whatsappMessage": "Hi, I want to book the Diabetes Care Panel at Krishna Path Labs. My name is:"
+      },
+      {
+        "id": "thyroid-profile",
+        "name": "Thyroid Profile (T3/T4/TSH)",
+        "testCount": 3,
+        "price": "₹399",
+        "mrp": "₹700",
+        "includedTests": [
+          "T3 Total",
+          "T4 Total",
+          "TSH Ultrasensitive"
+        ],
+        "whatsappMessage": "Hi, I want to book the Thyroid Profile at Krishna Path Labs. My name is:"
+      },
+      {
+        "id": "cardiac-risk",
+        "name": "Cardiac Risk Panel",
+        "testCount": 18,
+        "price": "₹1,499",
+        "mrp": "₹2,600",
+        "includedTests": [
+          "Resting ECG",
+          "hs-CRP",
+          "Homocysteine",
+          "Apolipoprotein A1",
+          "Apolipoprotein B",
+          "Lipoprotein (a)",
+          "CPK-Total",
+          "CPK-MB",
+          "Troponin I",
+          "NT-proBNP",
+          "Total Cholesterol",
+          "HDL Cholesterol",
+          "LDL Cholesterol",
+          "VLDL Cholesterol",
+          "Triglycerides",
+          "Total Cholesterol / HDL Ratio",
+          "LDL / HDL Ratio",
+          "Non-HDL Cholesterol"
+        ],
+        "whatsappMessage": "Hi, I want to book the Cardiac Risk Panel at Krishna Path Labs. My name is:"
+      },
+      {
+        "id": "womens-wellness",
+        "name": "Women's Wellness",
+        "testCount": 55,
+        "price": "₹2,199",
+        "mrp": "₹3,800",
+        "includedTests": [
+          "Haemoglobin",
+          "Total RBC Count",
+          "Total WBC Count",
+          "Platelet Count",
+          "Packed Cell Volume (PCV)",
+          "MCV",
+          "MCH",
+          "MCHC",
+          "RDW",
+          "Neutrophils",
+          "Lymphocytes",
+          "Eosinophils",
+          "Monocytes",
+          "Basophils",
+          "ESR",
+          "Peripheral Smear Examination",
+          "Absolute Neutrophil Count",
+          "Mentzer Index",
+          "T3 Total",
+          "T4 Total",
+          "TSH Ultrasensitive",
+          "Free T3",
+          "Free T4",
+          "Anti-TPO Antibody",
+          "Vitamin D (25-OH)",
+          "Vitamin B12",
+          "Serum Folate",
+          "Serum Iron",
+          "TIBC",
+          "Serum Ferritin",
+          "Transferrin Saturation",
+          "Prolactin",
+          "FSH",
+          "LH",
+          "Oestradiol",
+          "Progesterone",
+          "AMH",
+          "CA-125",
+          "Testosterone Total",
+          "DHEA-S",
+          "Pap Smear",
+          "Total Cholesterol",
+          "HDL Cholesterol",
+          "LDL Cholesterol",
+          "VLDL Cholesterol",
+          "Triglycerides",
+          "Total Cholesterol / HDL Ratio",
+          "LDL / HDL Ratio",
+          "Non-HDL Cholesterol",
+          "Total Bilirubin",
+          "Direct Bilirubin",
+          "Indirect Bilirubin",
+          "SGOT (AST)",
+          "SGPT (ALT)",
+          "Alkaline Phosphatase"
+        ],
+        "whatsappMessage": "Hi, I want to book the Women's Wellness package at Krishna Path Labs. My name is:"
+      },
+      {
+        "id": "senior-citizen",
+        "name": "Senior Citizen Complete",
+        "testCount": 88,
+        "price": "₹2,499",
+        "mrp": "₹4,300",
+        "includedTests": [
+          "Haemoglobin",
+          "Total RBC Count",
+          "Total WBC Count",
+          "Platelet Count",
+          "Packed Cell Volume (PCV)",
+          "MCV",
+          "MCH",
+          "MCHC",
+          "RDW",
+          "Neutrophils",
+          "Lymphocytes",
+          "Eosinophils",
+          "Monocytes",
+          "Basophils",
+          "ESR",
+          "Peripheral Smear Examination",
+          "Absolute Neutrophil Count",
+          "Mentzer Index",
+          "Fasting Blood Sugar",
+          "Post Prandial Blood Sugar",
+          "HbA1c",
+          "Estimated Average Glucose",
+          "Random Blood Sugar",
+          "Fasting Insulin",
+          "Urine Sugar (Fasting)",
+          "Urine Sugar (Post Prandial)",
+          "Total Cholesterol",
+          "HDL Cholesterol",
+          "LDL Cholesterol",
+          "VLDL Cholesterol",
+          "Triglycerides",
+          "Total Cholesterol / HDL Ratio",
+          "LDL / HDL Ratio",
+          "Non-HDL Cholesterol",
+          "Total Bilirubin",
+          "Direct Bilirubin",
+          "Indirect Bilirubin",
+          "SGOT (AST)",
+          "SGPT (ALT)",
+          "Alkaline Phosphatase",
+          "Total Protein",
+          "Serum Albumin",
+          "Serum Globulin",
+          "A/G Ratio",
+          "GGT",
+          "Blood Urea",
+          "Blood Urea Nitrogen",
+          "Serum Creatinine",
+          "Serum Uric Acid",
+          "eGFR",
+          "BUN / Creatinine Ratio",
+          "Serum Sodium",
+          "Serum Potassium",
+          "Serum Chloride",
+          "Serum Calcium",
+          "Serum Phosphorus",
+          "Serum Magnesium",
+          "T3 Total",
+          "T4 Total",
+          "TSH Ultrasensitive",
+          "Free T3",
+          "Free T4",
+          "Anti-TPO Antibody",
+          "Vitamin D (25-OH)",
+          "Vitamin B12",
+          "Serum Folate",
+          "Serum Iron",
+          "TIBC",
+          "Serum Ferritin",
+          "Transferrin Saturation",
+          "Urine Routine and Microscopy",
+          "Urine pH",
+          "Urine Specific Gravity",
+          "Urine Protein",
+          "Urine Glucose",
+          "Urine Ketones",
+          "Urine Bile Salts",
+          "Urine Bile Pigments",
+          "Urine Microalbumin",
+          "Resting ECG",
+          "hs-CRP",
+          "Homocysteine",
+          "Apolipoprotein A1",
+          "Apolipoprotein B",
+          "Lipoprotein (a)",
+          "CPK-Total",
+          "CPK-MB",
+          "Troponin I"
+        ],
+        "whatsappMessage": "Hi, I want to book the Senior Citizen Complete package at Krishna Path Labs. My name is:"
+      },
+      {
+        "id": "fever-panel",
+        "name": "Fever Panel (Dengue/Malaria/Typhoid)",
+        "testCount": 8,
+        "price": "₹1,100",
+        "mrp": "₹1,900",
+        "includedTests": [
+          "Dengue NS1 Antigen",
+          "Dengue IgM",
+          "Dengue IgG",
+          "Malaria Antigen (Pf/Pv)",
+          "Malaria Parasite Smear",
+          "Widal Test",
+          "Typhidot IgM",
+          "CRP"
+        ],
+        "whatsappMessage": "Hi, I want to book the Fever Panel at Krishna Path Labs. My name is:"
+      }
+    ],
+    "tests": [
+      {
+        "id": "cbc",
+        "name": "Complete Blood Count",
+        "category": "Blood",
+        "price": "₹350",
+        "sampleType": "Blood",
+        "reportTime": "6 hours"
+      },
+      {
+        "id": "esr",
+        "name": "ESR",
+        "category": "Blood",
+        "price": "₹180",
+        "sampleType": "Blood",
+        "reportTime": "6 hours"
+      },
+      {
+        "id": "fbs",
+        "name": "Fasting Blood Sugar",
+        "category": "Blood",
+        "price": "₹150",
+        "sampleType": "Blood",
+        "reportTime": "6 hours"
+      },
+      {
+        "id": "ppbs",
+        "name": "Post Prandial Blood Sugar",
+        "category": "Blood",
+        "price": "₹150",
+        "sampleType": "Blood",
+        "reportTime": "6 hours"
+      },
+      {
+        "id": "hba1c",
+        "name": "HbA1c",
+        "category": "Blood",
+        "price": "₹450",
+        "sampleType": "Blood",
+        "reportTime": "6 hours"
+      },
+      {
+        "id": "lipid",
+        "name": "Lipid Profile",
+        "category": "Blood",
+        "price": "₹600",
+        "sampleType": "Blood",
+        "reportTime": "6 hours"
+      },
+      {
+        "id": "lft",
+        "name": "Liver Function Test",
+        "category": "Blood",
+        "price": "₹650",
+        "sampleType": "Blood",
+        "reportTime": "6 hours"
+      },
+      {
+        "id": "kft",
+        "name": "Kidney Function Test",
+        "category": "Blood",
+        "price": "₹600",
+        "sampleType": "Blood",
+        "reportTime": "6 hours"
+      },
+      {
+        "id": "uric",
+        "name": "Uric Acid",
+        "category": "Blood",
+        "price": "₹220",
+        "sampleType": "Blood",
+        "reportTime": "6 hours"
+      },
+      {
+        "id": "calcium",
+        "name": "Serum Calcium",
+        "category": "Blood",
+        "price": "₹250",
+        "sampleType": "Blood",
+        "reportTime": "6 hours"
+      },
+      {
+        "id": "phosphorus",
+        "name": "Serum Phosphorus",
+        "category": "Blood",
+        "price": "₹250",
+        "sampleType": "Blood",
+        "reportTime": "6 hours"
+      },
+      {
+        "id": "vitd",
+        "name": "Vitamin D",
+        "category": "Blood",
+        "price": "₹1,100",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "vitb12",
+        "name": "Vitamin B12",
+        "category": "Blood",
+        "price": "₹900",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "ferritin",
+        "name": "Ferritin",
+        "category": "Blood",
+        "price": "₹650",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "iron",
+        "name": "Serum Iron",
+        "category": "Blood",
+        "price": "₹400",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "tibc",
+        "name": "TIBC",
+        "category": "Blood",
+        "price": "₹500",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "crp",
+        "name": "C-Reactive Protein",
+        "category": "Blood",
+        "price": "₹500",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "hscrp",
+        "name": "hs-CRP",
+        "category": "Blood",
+        "price": "₹700",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "rf",
+        "name": "Rheumatoid Factor",
+        "category": "Blood",
+        "price": "₹600",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "dengue-ns1",
+        "name": "Dengue NS1 Antigen",
+        "category": "Blood",
+        "price": "₹750",
+        "sampleType": "Blood",
+        "reportTime": "6 hours"
+      },
+      {
+        "id": "malaria",
+        "name": "Malaria Parasite Test",
+        "category": "Blood",
+        "price": "₹350",
+        "sampleType": "Blood",
+        "reportTime": "6 hours"
+      },
+      {
+        "id": "widal",
+        "name": "Widal Test",
+        "category": "Blood",
+        "price": "₹350",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "typhidot",
+        "name": "Typhidot IgM",
+        "category": "Blood",
+        "price": "₹650",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "bloodgroup",
+        "name": "Blood Group and Rh",
+        "category": "Blood",
+        "price": "₹250",
+        "sampleType": "Blood",
+        "reportTime": "6 hours"
+      },
+      {
+        "id": "ptinr",
+        "name": "PT INR",
+        "category": "Blood",
+        "price": "₹500",
+        "sampleType": "Blood",
+        "reportTime": "6 hours"
+      },
+      {
+        "id": "t3",
+        "name": "Total T3",
+        "category": "Hormone",
+        "price": "₹250",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "t4",
+        "name": "Total T4",
+        "category": "Hormone",
+        "price": "₹250",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "tsh",
+        "name": "Thyroid Stimulating Hormone",
+        "category": "Hormone",
+        "price": "₹250",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "ft3",
+        "name": "Free T3",
+        "category": "Hormone",
+        "price": "₹400",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "ft4",
+        "name": "Free T4",
+        "category": "Hormone",
+        "price": "₹400",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "antitpo",
+        "name": "Anti-TPO Antibody",
+        "category": "Hormone",
+        "price": "₹1,100",
+        "sampleType": "Blood",
+        "reportTime": "48 hours"
+      },
+      {
+        "id": "fsh",
+        "name": "FSH",
+        "category": "Hormone",
+        "price": "₹500",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "lh",
+        "name": "LH",
+        "category": "Hormone",
+        "price": "₹500",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "prolactin",
+        "name": "Prolactin",
+        "category": "Hormone",
+        "price": "₹550",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "testosterone",
+        "name": "Testosterone",
+        "category": "Hormone",
+        "price": "₹750",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "estradiol",
+        "name": "Estradiol",
+        "category": "Hormone",
+        "price": "₹750",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "amh",
+        "name": "AMH",
+        "category": "Hormone",
+        "price": "₹1,700",
+        "sampleType": "Blood",
+        "reportTime": "48 hours"
+      },
+      {
+        "id": "cortisol",
+        "name": "Cortisol",
+        "category": "Hormone",
+        "price": "₹700",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "insulin",
+        "name": "Fasting Insulin",
+        "category": "Hormone",
+        "price": "₹700",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "beta-hcg",
+        "name": "Beta hCG",
+        "category": "Hormone",
+        "price": "₹600",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "troponin",
+        "name": "Troponin I",
+        "category": "Cardiac",
+        "price": "₹1,000",
+        "sampleType": "Blood",
+        "reportTime": "6 hours"
+      },
+      {
+        "id": "ckmb",
+        "name": "CK-MB",
+        "category": "Cardiac",
+        "price": "₹700",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "bnp",
+        "name": "BNP",
+        "category": "Cardiac",
+        "price": "₹1,500",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "ddimer",
+        "name": "D-Dimer",
+        "category": "Cardiac",
+        "price": "₹1,100",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "homocysteine",
+        "name": "Homocysteine",
+        "category": "Cardiac",
+        "price": "₹1,000",
+        "sampleType": "Blood",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "apob",
+        "name": "Apolipoprotein B",
+        "category": "Cardiac",
+        "price": "₹1,100",
+        "sampleType": "Blood",
+        "reportTime": "48 hours"
+      },
+      {
+        "id": "urine-routine",
+        "name": "Urine Routine",
+        "category": "Urine",
+        "price": "₹150",
+        "sampleType": "Urine",
+        "reportTime": "6 hours"
+      },
+      {
+        "id": "urine-culture",
+        "name": "Urine Culture",
+        "category": "Urine",
+        "price": "₹850",
+        "sampleType": "Urine",
+        "reportTime": "48 hours"
+      },
+      {
+        "id": "microalbumin",
+        "name": "Urine Microalbumin",
+        "category": "Urine",
+        "price": "₹450",
+        "sampleType": "Urine",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "pregnancy",
+        "name": "Urine Pregnancy Test",
+        "category": "Urine",
+        "price": "₹250",
+        "sampleType": "Urine",
+        "reportTime": "6 hours"
+      },
+      {
+        "id": "urine-protein",
+        "name": "Urine Protein",
+        "category": "Urine",
+        "price": "₹220",
+        "sampleType": "Urine",
+        "reportTime": "6 hours"
+      },
+      {
+        "id": "xray",
+        "name": "Digital X-ray",
+        "category": "Imaging",
+        "price": "₹500",
+        "sampleType": "Imaging",
+        "reportTime": "6 hours"
+      },
+      {
+        "id": "ecg-test",
+        "name": "ECG",
+        "category": "Imaging",
+        "price": "₹350",
+        "sampleType": "Imaging",
+        "reportTime": "6 hours"
+      },
+      {
+        "id": "echo",
+        "name": "2D Echo",
+        "category": "Imaging",
+        "price": "₹1,800",
+        "sampleType": "Imaging",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "ultrasound-test",
+        "name": "Ultrasound Abdomen/Pelvis",
+        "category": "Imaging",
+        "price": "₹1,100",
+        "sampleType": "Imaging",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "tmt-test",
+        "name": "TMT",
+        "category": "Imaging",
+        "price": "₹2,000",
+        "sampleType": "Imaging",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "whole-body",
+        "name": "Whole Body Scan",
+        "category": "Imaging",
+        "price": "₹4,500",
+        "sampleType": "Imaging",
+        "reportTime": "48 hours"
+      },
+      {
+        "id": "opg",
+        "name": "Digital OPG",
+        "category": "Imaging",
+        "price": "₹900",
+        "sampleType": "Imaging",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "pft",
+        "name": "Pulmonary Function Test",
+        "category": "Imaging",
+        "price": "₹1,200",
+        "sampleType": "Imaging",
+        "reportTime": "24 hours"
+      },
+      {
+        "id": "bone-density",
+        "name": "Bone Density Scan",
+        "category": "Imaging",
+        "price": "₹1,700",
+        "sampleType": "Imaging",
+        "reportTime": "24 hours"
+      }
+    ],
+    "imaging": [
+      {
+        "id": "digital-xray",
+        "name": "Digital X-ray",
+        "price": "₹500",
+        "description": "Chest, bone and joint imaging with digital report sharing.",
+        "whatsappMessage": "Hi, I want to book a Digital X-ray at Krishna Path Labs. My name is:"
+      },
+      {
+        "id": "ecg",
+        "name": "ECG",
+        "price": "₹350",
+        "description": "Resting heart rhythm recording with scheduled and walk-in slots.",
+        "whatsappMessage": "Hi, I want to book an ECG at Krishna Path Labs. My name is:"
+      },
+      {
+        "id": "2d-echo",
+        "name": "2D Echo",
+        "price": "₹1,800",
+        "description": "Scheduled ultrasound imaging of the heart.",
+        "whatsappMessage": "Hi, I want to book a 2D Echo at Krishna Path Labs. My name is:"
+      },
+      {
+        "id": "ultrasound",
+        "name": "Ultrasound (abdomen/pelvis)",
+        "price": "₹1,100",
+        "description": "Scheduled abdomen and pelvis ultrasound with preparation guidance.",
+        "whatsappMessage": "Hi, I want to book an Ultrasound at Krishna Path Labs. My name is:"
+      },
+      {
+        "id": "tmt",
+        "name": "TMT",
+        "price": "₹2,000",
+        "description": "Exercise-based cardiac assessment with safety screening.",
+        "whatsappMessage": "Hi, I want to book a TMT at Krishna Path Labs. My name is:"
+      },
+      {
+        "id": "whole-body-scan",
+        "name": "Whole Body Scan",
+        "price": "₹4,500",
+        "description": "Planned imaging assessment with advance booking.",
+        "whatsappMessage": "Hi, I want to book a Whole Body Scan at Krishna Path Labs. My name is:"
+      }
+    ],
+    "homeCollection": {
+      "areas": [
+        "Benz Circle",
+        "Governorpet",
+        "Patamata",
+        "Labbipet",
+        "Gunadala",
+        "Poranki",
+        "Ramavarappadu",
+        "Auto Nagar",
+        "Bhavanipuram",
+        "Vidyadharapuram"
+      ],
+      "freeAbove": "Free above ₹500",
+      "standardCharge": "₹100 below ₹500",
+      "slots": [
+        "6–8 AM",
+        "8–10 AM",
+        "10 AM–12 PM",
+        "4–6 PM"
+      ],
+      "reportPromise": "Most routine reports on WhatsApp in 6 hours"
+    },
+    "pathologist": {
+      "name": "Dr. Naveen Chandra Varma",
+      "qualification": "MD (Pathology)",
+      "experience": "21 years",
+      "photo": "/images/krishna-labs/dr-naveen-varma.jpg",
+      "bio": "Dr. Naveen leads report review for routine and specialised pathology work at the Governorpet centre. He checks flagged values before release so your doctor receives a clear, signed report.",
+      "signedReportNote": "Reports are reviewed and digitally signed by the pathologist before they are shared."
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "siteId": "sridevi-dental",
+  "type": "dental",
+  "isDemo": true,
+  "siteUrl": "https://sridevi-dental-demo.example",
+  "geo": { "latitude": 16.5062, "longitude": 80.6480 },
+  "priceRevisionNote": "Prices revised January 2026",
+  "emergencyNote": "Dental emergency? Call us — we keep two evening slots free every day.",
+  "registrationLine": "AP State Dental Council Reg. No. A-43182",
+  "serviceAreas": ["Benz Circle", "Governorpet", "Patamata", "Labbipet", "Gunadala", "Poranki", "Ramavarappadu", "Auto Nagar", "Bhavanipuram", "Vidyadharapuram", "Moghalrajpuram", "Kanuru"],
+  "brand": { "name": "Sridevi Multispeciality Dental Care", "shortName": "Sridevi Dental", "tagline": "Gentle dentistry in the heart of Vijayawada", "logoText": "SD", "established": "Established 2011", "yearsInService": 14 },
+  "theme": { "primary": "#0F5257", "primaryDark": "#0A3B3F", "surface": "#FBF7F0", "accent": "#E85D4A", "text": "#1A1A1A", "muted": "#6B6B6B", "fontHeading": "Fraunces", "fontBody": "Inter", "radius": "8px" },
+  "contact": { "phonePrimary": "+91 98765 43210", "phoneAlt": "+91 98765 43210", "whatsapp": "+91 98765 43210", "email": "care@sridevidental.example", "addressLine1": "2nd Floor, Above HDFC Bank", "addressLine2": "Benz Circle", "city": "Vijayawada", "state": "Andhra Pradesh", "pincode": "520010", "mapEmbedUrl": "https://www.google.com/maps?q=Benz+Circle,+Vijayawada&output=embed", "mapDirectionsUrl": "https://www.google.com/maps/dir/?api=1&destination=Benz+Circle,+Vijayawada", "landmark": "Opposite Benz Circle flyover, next to Ratnadeep", "parkingNote": "Free two-wheeler parking in the building; car parking on the service road.", "languagesLine": "We speak Telugu, Hindi and English." },
+  "hours": [
+    { "day": "Monday", "open": "09:30", "close": "20:30", "breakStart": "14:00", "breakEnd": "16:30" },
+    { "day": "Tuesday", "open": "09:30", "close": "20:30", "breakStart": "14:00", "breakEnd": "16:30" },
+    { "day": "Wednesday", "open": "09:30", "close": "20:30", "breakStart": "14:00", "breakEnd": "16:30" },
+    { "day": "Thursday", "open": "09:30", "close": "20:30", "breakStart": "14:00", "breakEnd": "16:30" },
+    { "day": "Friday", "open": "09:30", "close": "20:30", "breakStart": "14:00", "breakEnd": "16:30" },
+    { "day": "Saturday", "open": "09:30", "close": "20:30", "breakStart": "14:00", "breakEnd": "16:30" },
+    { "day": "Sunday", "open": "10:00", "close": "13:00" }
+  ],
+  "stats": [
+    { "value": "18,240", "label": "patients treated" },
+    { "value": "14", "label": "years in Benz Circle" },
+    { "value": "4.8", "label": "from 340 reviews" },
+    { "value": "6", "label": "specialists" }
+  ],
+  "services": [
+    { "id": "consultation", "name": "Consultation", "shortDesc": "A careful check and a written treatment plan.", "longDesc": "We examine the concern, take notes and explain the options before treatment starts.", "price": "₹200", "priceNote": "waived with treatment", "duration": "20 minutes", "featured": false, "whatsappMessage": "Hi, I want to book an appointment for Consultation at Sridevi Dental. My name is:", "category": "General", "whoNeeds": "Anyone with pain, a broken tooth, bleeding gums or a routine concern.", "visits": "1 visit", "aftercare": "Keep your notes and X-rays with you for the next appointment." },
+    { "id": "scaling-polishing", "name": "Scaling & Polishing", "shortDesc": "Remove plaque and surface staining safely.", "longDesc": "Professional cleaning helps keep gums healthy and leaves teeth feeling smooth.", "price": "₹1,200", "duration": "30 minutes", "featured": true, "whatsappMessage": "Hi, I want to book an appointment for Scaling & Polishing at Sridevi Dental. My name is:", "category": "General", "whoNeeds": "Adults with tartar, gum bleeding, tobacco staining or a long gap between cleanings.", "visits": "1 visit", "aftercare": "Avoid strongly coloured food and drinks for the rest of the day if your gums feel tender." },
+    { "id": "root-canal", "name": "Root Canal — single sitting", "shortDesc": "Treatment planned around your tooth and comfort.", "longDesc": "Digital imaging helps us assess the tooth before we begin the root canal procedure.", "price": "₹4,500 – ₹7,000", "priceNote": "per tooth", "featured": true, "whatsappMessage": "Hi, I want to book an appointment for Root Canal at Sridevi Dental. My name is:", "category": "General", "whoNeeds": "Patients with deep decay, tooth sensitivity that lingers or swelling around a tooth.", "visits": "1–2 visits", "aftercare": "Do not chew on the treated tooth until the final crown or restoration is placed." },
+    { "id": "zirconia-crown", "name": "Zirconia Crown", "shortDesc": "A strong, natural-looking crown for damaged teeth.", "longDesc": "We match the shade and bite before the final crown is fitted.", "price": "₹6,500", "priceNote": "per crown", "featured": true, "whatsappMessage": "Hi, I want to book an appointment for Zirconia Crown at Sridevi Dental. My name is:", "category": "Cosmetic", "whoNeeds": "Patients with a cracked, heavily filled or root-canal-treated tooth.", "visits": "2 visits", "aftercare": "Use the crown like a natural tooth and return if your bite feels uneven." },
+    { "id": "dental-implant", "name": "Dental Implant", "shortDesc": "Replace a missing tooth with a fixed option.", "longDesc": "Your implant plan includes an assessment of bone support and the restoration stage.", "price": "₹28,000 onwards", "featured": true, "whatsappMessage": "Hi, I want to book an appointment for Dental Implant at Sridevi Dental. My name is:", "category": "Surgical", "whoNeeds": "Adults replacing one or more missing teeth who want a fixed option.", "visits": "4–6 visits", "aftercare": "Follow the soft-food and cleaning plan closely while the implant site heals." },
+    { "id": "metal-braces", "name": "Metal Braces", "shortDesc": "A reliable way to correct tooth alignment.", "longDesc": "You receive a full plan, review schedule and care guidance before braces are placed.", "price": "₹35,000 – ₹55,000", "featured": true, "whatsappMessage": "Hi, I want to book an appointment for Metal Braces at Sridevi Dental. My name is:", "category": "Orthodontics", "whoNeeds": "Teens and adults with crowding, spacing or a bite concern.", "visits": "Monthly reviews for 12–24 months", "aftercare": "Brush around brackets after every meal and keep your review appointments." },
+    { "id": "clear-aligners", "name": "Clear Aligners", "shortDesc": "Removable trays for planned tooth movement.", "longDesc": "We show the expected tooth movement and explain how often you need to wear each set.", "price": "₹75,000 onwards", "featured": true, "whatsappMessage": "Hi, I want to book an appointment for Clear Aligners at Sridevi Dental. My name is:", "category": "Orthodontics", "whoNeeds": "Adults and older teens who want a removable alignment option.", "visits": "Reviews every 6–8 weeks", "aftercare": "Wear aligners for the agreed daily hours and store them in their case when eating." },
+    { "id": "teeth-whitening", "name": "Teeth Whitening", "shortDesc": "Brighten teeth after an oral health check.", "longDesc": "We first check sensitivity and existing restorations to recommend the right method.", "price": "₹8,000", "featured": false, "whatsappMessage": "Hi, I want to book an appointment for Teeth Whitening at Sridevi Dental. My name is:", "category": "Cosmetic", "whoNeeds": "Adults with external staining and healthy teeth and gums.", "visits": "1–2 visits", "aftercare": "Avoid tea, coffee, tobacco and strongly coloured food for 48 hours." },
+    { "id": "tooth-extraction", "name": "Tooth Extraction", "shortDesc": "A careful removal when a tooth cannot be saved.", "longDesc": "We assess the tooth and explain after-care before your appointment.", "price": "₹800", "priceNote": "simple extraction", "featured": false, "whatsappMessage": "Hi, I want to book an appointment for Tooth Extraction at Sridevi Dental. My name is:", "category": "Surgical", "whoNeeds": "Patients with a badly damaged tooth, severe infection or an advised removal.", "visits": "1 visit", "aftercare": "Bite on gauze as instructed and avoid spitting, straws and smoking for 24 hours." },
+    { "id": "kids-fluoride", "name": "Kids' Fluoride Treatment", "shortDesc": "Extra protection for developing teeth.", "longDesc": "A short preventive visit that helps reduce the chance of early decay.", "price": "₹1,000", "featured": false, "whatsappMessage": "Hi, I want to book an appointment for Kids' Fluoride Treatment at Sridevi Dental. My name is:", "category": "Kids", "whoNeeds": "Children with early decay risk, frequent snacking or newly erupted permanent teeth.", "visits": "1 visit every 6 months when advised", "aftercare": "Do not give food or drink for 30 minutes after the fluoride application." }
+  ],
+  "team": [
+    { "name": "Dr. Sridevi Kolluri", "qualification": "BDS, MDS (Prosthodontics)", "specialization": "Implants and full-mouth rehabilitation", "experience": "14 years", "bio": "Dr. Sridevi studied at Government Dental College and Hospital, Hyderabad, and holds an ICOI fellowship in oral implantology. She keeps a notebook of shade matches and still checks every crown fit herself before the patient leaves.", "languages": ["Telugu", "Hindi", "English"], "photo": "/images/sridevi-dental/dr-sridevi-kolluri.jpg", "education": ["BDS — Government Dental College and Hospital, Hyderabad", "MDS Prosthodontics — Government Dental College and Hospital, Hyderabad", "ICOI Fellowship in Oral Implantology"], "memberships": ["Indian Dental Association", "Andhra Pradesh State Dental Council"], "treatmentFocus": ["Dental implants", "Full-mouth rehabilitation", "Zirconia crowns"] },
+    { "name": "Dr. Harsha Vardhan Reddy", "qualification": "BDS, MDS (Orthodontics)", "specialization": "Braces and clear aligners", "experience": "9 years", "bio": "Dr. Harsha trained at Narayana Dental College and Hospital, Nellore, and is an Invisalign provider. He brings each patient a printed progress chart because he knows small movement milestones matter.", "languages": ["Telugu", "English"], "photo": "/images/sridevi-dental/dr-harsha-vardhan-reddy.jpg", "education": ["BDS — Narayana Dental College and Hospital, Nellore", "MDS Orthodontics — Narayana Dental College and Hospital, Nellore", "Invisalign Provider Training"], "memberships": ["Indian Dental Association", "Andhra Pradesh State Dental Council"], "treatmentFocus": ["Metal braces", "Clear aligners", "Early orthodontic review"] },
+    { "name": "Dr. Anusha Peddi", "qualification": "BDS", "specialization": "Paediatric and preventive dentistry", "experience": "5 years", "bio": "Dr. Anusha studied at GITAM Dental College and Hospital, Visakhapatnam, and completed the IAPD preventive dentistry programme. She lets children hold the mouth mirror first, which makes a first visit easier for many families.", "languages": ["Telugu", "Hindi", "English"], "photo": "/images/sridevi-dental/dr-anusha-peddi.jpg", "education": ["BDS — GITAM Dental College and Hospital, Visakhapatnam", "IAPD Preventive Dentistry Programme"], "memberships": ["Indian Dental Association", "Andhra Pradesh State Dental Council"], "treatmentFocus": ["Children's preventive visits", "Fluoride treatment", "Early decay care"] }
+  ],
+  "reviews": [
+    { "name": "Lakshmi Prasanna", "area": "Patamata", "rating": 5, "date": "June 2026", "text": "I came for scaling and polishing. I waited 12 minutes, and Nandini at reception explained the ₹1,200 charge before I went in. My teeth felt noticeably cleaner the same evening.", "service": "Scaling & Polishing" },
+    { "name": "Srinivas Rao", "area": "Governorpet", "rating": 5, "date": "May 2026", "text": "Dr. Sridevi completed my single-sitting root canal without rushing. The ₹5,500 estimate was the amount billed, and I received clear instructions for the numbness and medicine.", "service": "Root Canal" },
+    { "name": "Madhuri S.", "area": "Gunadala", "rating": 5, "date": "April 2026", "text": "My zirconia crown shade was checked beside my natural teeth twice before fitting. The assistant called the next day to ask whether the bite still felt high.", "service": "Zirconia Crown" },
+    { "name": "Kiran Kumar", "area": "Poranki", "rating": 4, "date": "March 2026", "text": "The braces consultation was clear and the ₹42,000 plan was quoted before scans. Saturday evening was busy, so I waited about 18 minutes longer than the booked time.", "service": "Metal Braces", "ownerReply": "Reply from Dr. Sridevi: Thank you, Kiran. We now keep a separate Saturday scan slot after 6:30 PM so braces reviews do not wait behind walk-ins." },
+    { "name": "Rajeswari Devi", "area": "Auto Nagar", "rating": 5, "date": "February 2026", "text": "I was worried about an implant after losing a back tooth. Dr. Sridevi showed the X-ray on screen and explained the separate implant and crown costs before I agreed.", "service": "Dental Implant" }
+  ],
+  "gallery": [
+    { "src": "/images/sridevi-dental/clinic-exterior.jpg", "alt": "Exterior entrance near Benz Circle", "caption": "Benz Circle entrance", "category": "clinic" },
+    { "src": "/images/sridevi-dental/reception.jpg", "alt": "Reception desk at Sridevi Dental", "caption": "Reception", "category": "clinic" },
+    { "src": "/images/sridevi-dental/consultation-room.jpg", "alt": "Dental consultation room", "caption": "Consultation room", "category": "clinic" },
+    { "src": "/images/sridevi-dental/treatment-chair.jpg", "alt": "Treatment chair and dental light", "caption": "Treatment room", "category": "clinic" },
+    { "src": "/images/sridevi-dental/digital-xray.jpg", "alt": "Digital dental X-ray screen", "caption": "Digital X-ray", "category": "technology" },
+    { "src": "/images/sridevi-dental/sterilisation.jpg", "alt": "Sterilisation area", "caption": "Sterilisation area", "category": "safety" },
+    { "src": "/images/sridevi-dental/kids-corner.jpg", "alt": "Children's waiting corner", "caption": "Children's corner", "category": "clinic" },
+    { "src": "/images/sridevi-dental/smile-consultation.jpg", "alt": "Smile consultation desk", "caption": "Smile planning", "category": "consultation" }
+  ],
+  "faqs": [{ "question": "Can I book an evening appointment?", "answer": "Yes. Monday to Saturday appointments are available until 8:30 PM." }],
+  "seo": { "title": "Dental Clinic in Benz Circle, Vijayawada | Sridevi Multispeciality Dental Care", "description": "Benz Circle dental clinic with ₹200 consultations, root canals and implants in Vijayawada.", "keywords": ["dentist Vijayawada", "dental clinic Benz Circle", "root canal Vijayawada", "dental implants Vijayawada"], "ogImage": "/opengraph-image" },
+  "enquiryFields": [
+    { "name": "name", "label": "Name", "type": "text", "required": true, "placeholder": "Your name" },
+    { "name": "phone", "label": "Phone", "type": "tel", "required": true, "placeholder": "10-digit mobile number" },
+    { "name": "service", "label": "Service", "type": "select", "required": true, "placeholder": "Choose a treatment" },
+    { "name": "preferredDay", "label": "Preferred day", "type": "select", "required": true, "placeholder": "Choose a day" },
+    { "name": "message", "label": "Message", "type": "textarea", "placeholder": "Anything we should know?" }
+  ],
+  "contactFaqs": [
+    { "question": "Do you take walk-ins?", "answer": "Yes, when a doctor is free. Call before leaving home so we can tell you the current wait." },
+    { "question": "Do you accept insurance?", "answer": "We help with eligible cashless claims. Bring your card and policy details so the team can check the process." },
+    { "question": "Is EMI available?", "answer": "EMI is available for eligible treatments above ₹15,000. Ask for the current card and bank options at reception." },
+    { "question": "Do you treat children?", "answer": "Yes. Dr. Anusha sees children for preventive visits, fluoride treatment and early decay concerns." },
+    { "question": "Is parking available?", "answer": "Two-wheelers can park beside the building. Car parking is easier at the service road after 5:00 PM." },
+    { "question": "What are Sunday timings?", "answer": "Sunday appointments are available from 10:00 AM to 1:00 PM." }
+  ],
+  "about": {
+    "story": ["Sridevi Dental began in 2011 with one chair in Governorpet and a simple promise: explain the problem before proposing a treatment.", "As more families travelled from Patamata and Benz Circle, the clinic moved to its current location in 2016. The second operatory was added in 2021 so longer procedures and routine appointments could run without making patients wait.", "Today the team still works in the same practical way. You see the X-ray, understand the cost and leave with clear instructions."],
+    "timeline": [
+      { "year": "2011", "title": "First chair in Governorpet", "text": "The clinic opens with one treatment chair and a focus on family dental care." },
+      { "year": "2013", "title": "Digital imaging added", "text": "An RVG system helps patients see the tooth concern during their consultation." },
+      { "year": "2016", "title": "Moved to Benz Circle", "text": "The clinic moves above HDFC Bank for easier access from across Vijayawada." },
+      { "year": "2021", "title": "Second operatory opens", "text": "A second treatment room reduces gaps between routine and longer appointments." },
+      { "year": "2025", "title": "Implant planning suite", "text": "Digital planning is added for implant and full-mouth rehabilitation cases." }
+    ],
+    "sterilization": [
+      { "title": "Instrument tracking", "text": "Each reusable instrument set is packed, marked and logged before it returns to a treatment room." },
+      { "title": "Autoclave cycle", "text": "Packed instruments run through a monitored steam autoclave cycle before clinical use." },
+      { "title": "Single-use items", "text": "Needles, suction tips, gloves and protective barriers are opened fresh for each patient." },
+      { "title": "Surface preparation", "text": "Treatment surfaces are cleaned and covered between patients using clinic-grade barriers." }
+    ],
+    "equipment": [
+      { "name": "Digital OPG", "text": "A full-jaw image helps your doctor plan implants, wisdom tooth care and orthodontic treatment." },
+      { "name": "RVG sensor", "text": "A small digital X-ray sensor gives a detailed tooth image during the visit." },
+      { "name": "Apex locator", "text": "This helps measure the root canal length more precisely during treatment." },
+      { "name": "Rotary endodontics", "text": "Motor-driven files help shape root canals in a controlled way." },
+      { "name": "Intraoral camera", "text": "You can see close-up images of the tooth concern on the screen with your doctor." },
+      { "name": "Ultrasonic scaler", "text": "This removes hardened deposits during a professional cleaning." }
+    ]
+  },
+  "home": {
+    "hero": { "eyebrow": "Benz Circle · Since 2011", "heading": "Your teeth need a careful plan, not a hurried visit.", "subheading": "See a dentist near Benz Circle for clear advice, treatment costs and evening appointments that fit your day.", "image": { "src": "/images/sridevi-dental/hero-clinic.jpg", "alt": "Dentist consulting with a patient at Sridevi Dental" }, "whatsappMessage": "Hi, I want to book an appointment at Sridevi Dental. My name is:" },
+    "sections": {
+      "services": { "eyebrow": "Treatments and fees", "heading": "Know the treatment and the price before you sit down.", "subheading": "Your final plan depends on an examination. We quote the cost before treatment starts." },
+      "whyChoose": { "eyebrow": "At the clinic", "heading": "A practical dental visit, from first check to follow-up.", "subheading": "You get clear information at each stage." },
+      "doctors": { "eyebrow": "Meet the doctors", "heading": "Specialists for routine care and longer treatment plans.", "subheading": "The same doctor explains the work and reviews your progress." },
+      "beforeAfter": { "eyebrow": "Treatment cases", "heading": "Move the handle to compare planned results.", "subheading": "Images show representative treatment stages. Your result depends on your teeth and oral health." },
+      "gallery": { "eyebrow": "Inside the clinic", "heading": "A clean space near Benz Circle.", "subheading": "See the rooms, equipment and waiting area before you visit." },
+      "reviews": { "eyebrow": "Patient feedback", "heading": "What patients mention after their appointment.", "subheading": "These are portfolio demonstrations using fictional patient details." },
+      "location": { "eyebrow": "Find the clinic", "heading": "Above HDFC Bank at Benz Circle.", "parkingLabel": "Parking", "directionsLabel": "Get Directions" },
+      "appointment": { "eyebrow": "Book an appointment", "heading": "Tell us what you need help with.", "subheading": "We will call you within 2 hours during clinic hours.", "reassuranceHeading": "You will know the next step.", "reassuranceText": "We confirm the doctor, the likely visit time and anything you should bring before you travel to Benz Circle." }
+    },
+    "whyChoose": [
+      { "heading": "Single-sitting root canals", "text": "When your tooth is suitable, treatment can be completed in one planned visit." },
+      { "heading": "Digital X-ray on site", "text": "Your doctor can review the image with you before recommending treatment." },
+      { "heading": "Price quoted before treatment", "text": "You receive the treatment cost before work starts. Ask questions before you decide." },
+      { "heading": "Evening slots till 8:30 PM", "text": "Book after work from Monday to Saturday, subject to the doctor’s schedule." }
+    ],
+    "beforeAfter": [
+      { "beforeSrc": "/images/sridevi-dental/case-crowns-before.jpg", "beforeAlt": "Before full ceramic crown treatment", "afterSrc": "/images/sridevi-dental/case-crowns-after.jpg", "afterAlt": "After full ceramic crown treatment", "treatment": "Full ceramic crowns", "duration": "2 visits" },
+      { "beforeSrc": "/images/sridevi-dental/case-aligners-before.jpg", "beforeAlt": "Before clear aligner treatment", "afterSrc": "/images/sridevi-dental/case-aligners-after.jpg", "afterAlt": "After clear aligner treatment", "treatment": "Clear aligners", "duration": "11 months" },
+      { "beforeSrc": "/images/sridevi-dental/case-implant-before.jpg", "beforeAlt": "Before dental implant restoration", "afterSrc": "/images/sridevi-dental/case-implant-after.jpg", "afterAlt": "After dental implant restoration", "treatment": "Dental implant restoration", "duration": "4 months" },
+      { "beforeSrc": "/images/sridevi-dental/case-whitening-before.jpg", "beforeAlt": "Before teeth whitening", "afterSrc": "/images/sridevi-dental/case-whitening-after.jpg", "afterAlt": "After teeth whitening", "treatment": "Teeth whitening", "duration": "2 visits" }
+    ],
+    "paymentNotes": ["Cashless insurance accepted", "EMI available on treatments above ₹15,000", "UPI / card / cash"],
+    "googleReviews": { "label": "See all 340 reviews on Google", "url": "https://www.google.com/search?q=Sridevi+Multispeciality+Dental+Care+Vijayawada+reviews" }
+  }
+}

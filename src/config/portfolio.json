@@ -1,0 +1,50 @@
+{
+  "siteId": "portfolio",
+  "type": "portfolio",
+  "isDemo": true,
+  "siteUrl": "https://local-site-studio.vercel.app",
+  "geo": { "latitude": 16.5062, "longitude": 80.6480 },
+  "brand": { "name": "Local Site Studio", "shortName": "Local Site Studio", "tagline": "Websites for Vijayawada businesses", "logoText": "LS", "established": "Independent studio", "yearsInService": 1 },
+  "theme": { "primary": "#17221F", "primaryDark": "#101715", "surface": "#F2F0E8", "accent": "#D98B45", "text": "#17221F", "muted": "#5E6762", "fontHeading": "Instrument Serif", "fontBody": "DM Sans", "radius": "8px" },
+  "contact": { "phonePrimary": "+91 98765 43210", "phoneAlt": "+91 98765 43210", "whatsapp": "+91 98765 43210", "email": "hello@localsitestudio.example", "addressLine1": "Vijayawada", "addressLine2": "Andhra Pradesh", "city": "Vijayawada", "state": "Andhra Pradesh", "pincode": "520010", "mapEmbedUrl": "", "mapDirectionsUrl": "https://maps.google.com/?q=Vijayawada", "landmark": "Working with Vijayawada businesses", "languagesLine": "We speak Telugu, Hindi and English." },
+  "hours": [],
+  "stats": [],
+  "services": [],
+  "team": [],
+  "reviews": [],
+  "gallery": [],
+  "faqs": [],
+  "seo": { "title": "Local Site Studio | Vijayawada business websites", "description": "Vijayawada websites for clinics, labs and coaching centres. Standard builds from ₹6,999 in 3 days.", "keywords": ["Vijayawada web designer", "clinic website Vijayawada", "local business website"], "ogImage": "/opengraph-image" },
+  "enquiryFields": [
+    { "name": "name", "label": "Your name", "type": "text", "required": true, "placeholder": "Name" },
+    { "name": "phone", "label": "Phone", "type": "tel", "required": true, "placeholder": "10-digit mobile number" },
+    { "name": "message", "label": "What do you need?", "type": "textarea", "placeholder": "Clinic, lab or coaching centre" }
+  ],
+  "portfolio": {
+    "ownerName": "Your Name",
+    "availability": "Currently taking 4 clients this month",
+    "whatsappMessage": "Hi, I want a website for my Vijayawada business. My business type is:",
+    "work": [
+      { "name": "Sridevi Multispeciality Dental Care", "type": "Dental clinic", "url": "https://sridevi-dental.vercel.app", "tags": ["Google Business setup", "WhatsApp booking", "Mobile-first", "5-day delivery"], "previewTitle": "Gentle dentistry", "previewLocality": "Benz Circle · Since 2011", "previewColor": "#0F5257" },
+      { "name": "Krishna Path Labs", "type": "Diagnostic lab", "url": "https://krishna-path-labs.vercel.app", "tags": ["Google Business setup", "WhatsApp booking", "Mobile-first", "5-day delivery"], "previewTitle": "Reports in 6 hours", "previewLocality": "Governorpet · Since 2008", "previewColor": "#12294B" }
+    ],
+    "included": ["Click-to-call on every page", "WhatsApp booking with prefilled messages", "Google Maps and directions", "Enquiry form to Google Sheet and WhatsApp", "Gallery and reviews section", "Google Business Profile setup and optimisation", "Review-request QR card", "Local SEO and schema", "Free .in domain for the first year", "Free hosting and SSL", "90+ PageSpeed target"],
+    "packages": [
+      { "id": "starter", "name": "Starter", "price": "₹6,999", "timeline": "3 days", "inclusions": ["One-page site", "Click-to-call and WhatsApp", "Google Map", "Basic local SEO"] },
+      { "id": "standard", "name": "Standard", "price": "₹12,999", "timeline": "5–7 days", "featured": true, "inclusions": ["Up to 6 pages", "Booking form and WhatsApp", "Reviews, gallery and maps", "Google Business setup", "Local schema and SEO"] },
+      { "id": "premium", "name": "Premium", "price": "₹24,999", "timeline": "12–14 days", "inclusions": ["Up to 12 pages", "Custom enquiry flow", "Portfolio and service catalogue", "Google Business and review QR", "Priority support for 30 days"] }
+    ],
+    "maintenance": "Annual maintenance ₹4,999/year from year 2.",
+    "founderOffer": "First 3 clients: 40% off in exchange for a testimonial.",
+    "process": ["Free demo of your business", "15-min call", "50% advance", "Site live in 5 days", "Google listing optimised"],
+    "faqs": [
+      { "question": "Who owns the domain?", "answer": "You do. It is registered in your name and you keep the registrar login." },
+      { "question": "What if I want changes later?", "answer": "Send the change on WhatsApp. Small text and photo changes are covered by maintenance." },
+      { "question": "Do I need to know anything technical?", "answer": "No. You approve the copy, photos and prices. I handle the build and launch." },
+      { "question": "What happens after the first year?", "answer": "Hosting and SSL remain covered. Annual maintenance is ₹4,999 from year 2." },
+      { "question": "Do you handle Google Maps?", "answer": "Yes. Standard and Premium include Google Business Profile setup and map placement." },
+      { "question": "Can I see it before I pay?", "answer": "Yes. You receive a private preview before the balance is due." }
+    ],
+    "upi": "yourupi@bank"
+  }
+}
