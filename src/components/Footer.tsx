@@ -16,6 +16,13 @@ const quickLinksByType: Record<string, { href: string; label: string }[]> = {
     { href: "/reports", label: "Download reports" },
     { href: "/contact", label: "Governorpet contact" },
   ],
+  gym: [
+    { href: "/membership", label: "Membership fees" },
+    { href: "/timetable", label: "Class timetable" },
+    { href: "/gallery", label: "Studio gallery" },
+    { href: "/about", label: "About the studio" },
+    { href: "/contact", label: "Contact Patamata" },
+  ],
 };
 
 function displayTime(value: string) {
@@ -79,7 +86,7 @@ export function Footer({ site }: { site: SiteConfig }) {
 
         <section>
           <h2 className="text-xs font-extrabold uppercase tracking-[0.14em] text-[var(--color-accent)]">
-            {site.type === "diagnostics" ? "Services" : "Treatments"}
+            {site.type === "diagnostics" ? "Services" : site.type === "gym" ? "Programs" : "Treatments"}
           </h2>
           <ul className="mt-5 space-y-2.5 text-sm text-white/75">
             {site.services.map((service) => (

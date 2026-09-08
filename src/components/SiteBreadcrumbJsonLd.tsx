@@ -17,11 +17,15 @@ const labels: Record<string, string> = {
   "/tests": "Test catalogue",
   "/home-collection": "Home collection",
   "/reports": "Reports",
+  "/membership": "Membership",
+  "/timetable": "Timetable",
+  "/trainers": "Trainers",
 };
 
 export function SiteBreadcrumbJsonLd({ site }: { site: SiteConfig }) {
   const path = usePathname();
-  const label = labels[path];
+  // The gym calls the same route "Programs" in its nav and its visible crumb.
+  const label = path === "/services" && site.type === "gym" ? "Programs" : labels[path];
   if (!label) return null;
   return <JsonLd data={breadcrumbSchema(site, label, path)} />;
 }

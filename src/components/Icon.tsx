@@ -29,6 +29,9 @@ const paths = {
   chair: "M7 4h7a3 3 0 0 1 3 3v6H7z|M7 13v4a3 3 0 0 0 3 3h7M4.6 20H9",
   card: "M3.4 6.6h17.2v10.8H3.4zM3.4 10.4h17.2M6.6 14.4h3.4",
   lock: "M6.4 10.4h11.2v9.2H6.4zM8.8 10.4V7.8a3.2 3.2 0 0 1 6.4 0v2.6",
+  dumbbell: "M6.8 7.6v8.8M17.2 7.6v8.8|M3.6 9.8v4.4M20.4 9.8v4.4|M6.8 12h10.4",
+  bolt: "M13.4 3 6 13.2h4.8L10.6 21 18 10.8h-4.8L13.4 3Z",
+  timer: "M12 21a7.6 7.6 0 1 0 0-15.2A7.6 7.6 0 0 0 12 21Z|M12 9.6v4l2.6 1.6M9.4 3h5.2",
 } as const;
 
 export type IconName = keyof typeof paths;

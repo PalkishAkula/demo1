@@ -31,7 +31,9 @@ export function StickyMobileBar({ site }: { site: SiteConfig }) {
   const message =
     site.type === "diagnostics"
       ? `Hi, I want to book a home collection with ${site.brand.shortName}. My area is:`
-      : `Hi, I want to book a dental appointment at ${site.brand.shortName}. My name is:`;
+      : site.type === "gym"
+        ? `Hi, I want to book a free first session at ${site.brand.shortName}. My name is:`
+        : `Hi, I want to book a dental appointment at ${site.brand.shortName}. My name is:`;
 
   const actions: { label: string; href: string; icon: IconName; external?: boolean }[] = [
     { label: "Call", href: `tel:${site.contact.phonePrimary.replace(/\s/g, "")}`, icon: "phone" },

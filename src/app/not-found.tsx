@@ -6,18 +6,23 @@ export default function NotFound() {
   const site = getSite();
   const isLab = site.type === "diagnostics";
   const isPortfolio = site.type === "portfolio";
+  const isGym = site.type === "gym";
 
   const heading = isPortfolio
     ? "That studio page is not here."
     : isLab
       ? "That report page is not here."
-      : "That clinic page is not here.";
+      : isGym
+        ? "That gym page is not here."
+        : "That clinic page is not here.";
 
   const text = isPortfolio
     ? "Go back to the studio page to see the demo sites, packages and contact details."
     : isLab
       ? "Use the home page to search 60 tests, book a Governorpet visit or arrange a Vijayawada collection."
-      : "Use the home page to check Benz Circle hours, treatment prices or the next available appointment.";
+      : isGym
+        ? "Use the home page to check Patamata floor hours, membership fees or this week's class timetable."
+        : "Use the home page to check Benz Circle hours, treatment prices or the next available appointment.";
 
   const links = isPortfolio
     ? [{ href: "/#work", label: "See the demo sites" }]
@@ -27,11 +32,17 @@ export default function NotFound() {
           { href: "/packages", label: "Health packages" },
           { href: "/home-collection", label: "Home collection" },
         ]
-      : [
-          { href: "/services", label: "Treatments and fees" },
-          { href: "/doctors", label: "Meet the doctors" },
-          { href: "/contact", label: "Contact the clinic" },
-        ];
+      : isGym
+        ? [
+            { href: "/membership", label: "Membership and fees" },
+            { href: "/timetable", label: "Class timetable" },
+            { href: "/contact", label: "Contact the studio" },
+          ]
+        : [
+            { href: "/services", label: "Treatments and fees" },
+            { href: "/doctors", label: "Meet the doctors" },
+            { href: "/contact", label: "Contact the clinic" },
+          ];
 
   return (
     <main className="relative isolate grid min-h-screen place-items-center overflow-hidden bg-[var(--color-surface)] px-5 py-20">

@@ -1,11 +1,13 @@
 import krishnaLabs from "@/config/krishna-labs.json";
 import sriDeviDental from "@/config/sridevi-dental.json";
 import portfolio from "@/config/portfolio.json";
+import zoomFitness from "@/config/zoom-fitness.json";
 import type { SiteConfig } from "@/types/site";
 
 const sites: Record<string, SiteConfig> = {
   "sridevi-dental": sriDeviDental as SiteConfig,
   "krishna-labs": krishnaLabs as SiteConfig,
+  "zoom-fitness": zoomFitness as SiteConfig,
   portfolio: portfolio as SiteConfig,
 };
 

@@ -15,12 +15,15 @@ import { faqSchema, pageMetadata } from "@/lib/seo";
 export function generateMetadata(): Metadata {
   const site = getSite();
   const isLab = site.type === "diagnostics";
+  const isGym = site.type === "gym";
   return pageMetadata(site, {
     path: "/contact",
     title: `Contact ${site.brand.name} | Vijayawada`,
     description: isLab
       ? "Call the Governorpet lab for 60 listed tests, home collection and prices from ₹120."
-      : "Call the Benz Circle clinic for ₹200 consultations, treatment prices and appointment times.",
+      : isGym
+        ? "Call the Patamata gym for a free first session, ₹1,450 monthly membership and class slots."
+        : "Call the Benz Circle clinic for ₹200 consultations, treatment prices and appointment times.",
   });
 }
 
@@ -28,8 +31,9 @@ export default function ContactPage() {
   const site = getSite();
   const diagnostics = site.diagnostics;
   const isLab = site.type === "diagnostics" && Boolean(diagnostics);
+  const isGym = site.type === "gym";
   const faqs = site.contactFaqs ?? [];
-  const bookingLabel = diagnostics?.home.hero.bookingLabel;
+  const bookingLabel = isGym ? "Book my free session" : diagnostics?.home.hero.bookingLabel;
   const phoneHref = `tel:${site.contact.phonePrimary.replace(/\s/g, "")}`;
 
   return (
@@ -38,13 +42,21 @@ export default function ContactPage() {
 
       <PageHero
         breadcrumb="Contact"
-        eyebrow={isLab ? "Contact the centre" : "Contact the clinic"}
+        eyebrow={isLab ? "Contact the centre" : isGym ? "Contact the studio" : "Contact the clinic"}
         subtitle={
           isLab
             ? "Call between 6.30 am and 9 pm, or send the form and a technician will confirm your slot."
-            : "Send the form and we call you back within two hours during clinic hours."
+            : isGym
+              ? "Send the form and we call you back within two hours during floor hours."
+              : "Send the form and we call you back within two hours during clinic hours."
         }
-        title={isLab ? "Book home collection or find the Governorpet lab." : "Book, find us or ask a practical question."}
+        title={
+          isLab
+            ? "Book home collection or find the Governorpet lab."
+            : isGym
+              ? "Book your free session or find the Patamata floor."
+              : "Book, find us or ask a practical question."
+        }
       >
         <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
           <OpenNowBadge hours={site.hours} />
@@ -97,7 +109,7 @@ export default function ContactPage() {
         <Section
           eyebrow="Common questions"
           ground="dots"
-          heading={isLab ? "Before you book a test." : "Before you travel to Benz Circle."}
+          heading={isLab ? "Before you book a test." : isGym ? "Before you walk in to Patamata." : "Before you travel to Benz Circle."}
           variant="surface"
         >
           <div className="max-w-3xl">

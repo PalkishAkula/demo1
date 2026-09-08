@@ -23,6 +23,13 @@ const navByType: Record<string, { href: string; label: string }[]> = {
     { href: "/reports", label: "Reports" },
     { href: "/contact", label: "Contact" },
   ],
+  gym: [
+    { href: "/membership", label: "Membership" },
+    { href: "/services", label: "Programs" },
+    { href: "/timetable", label: "Timetable" },
+    { href: "/trainers", label: "Trainers" },
+    { href: "/contact", label: "Contact" },
+  ],
   portfolio: [
     { href: "/#work", label: "Work" },
     { href: "/#packages", label: "Packages" },
@@ -33,6 +40,7 @@ const navByType: Record<string, { href: string; label: string }[]> = {
 const ctaByType: Record<string, { href: string; label: string }> = {
   dental: { href: "/contact#enquiry", label: "Book Appointment" },
   diagnostics: { href: "/contact#enquiry", label: "Book Home Collection" },
+  gym: { href: "/contact#enquiry", label: "Free First Session" },
   portfolio: { href: "/#contact", label: "Start a project" },
 };
 

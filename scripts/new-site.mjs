@@ -14,7 +14,7 @@ import { createInterface } from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
 import path from "node:path";
 
-const TYPES = ["dental", "diagnostics"];
+const TYPES = ["dental", "diagnostics", "gym"];
 
 function parseFlags(argv) {
   const flags = {};
@@ -73,7 +73,8 @@ const siteId = name
   .replace(/(^-|-$)/g, "");
 
 const root = process.cwd();
-const source = path.join(root, "src", "config", type === "dental" ? "sridevi-dental.json" : "krishna-labs.json");
+const templateByType = { dental: "sridevi-dental.json", diagnostics: "krishna-labs.json", gym: "zoom-fitness.json" };
+const source = path.join(root, "src", "config", templateByType[type]);
 const target = path.join(root, "src", "config", `${siteId}.json`);
 
 if (existsSync(target)) {

@@ -57,12 +57,38 @@ const manifest = [
   { site: "krishna-labs", file: "facility-hematology.jpg", scene: "microscopeUnit", size: [560, 560], opts: { caption: "Microscopy" } },
   { site: "krishna-labs", file: "facility-ultrasound.jpg", scene: "ultrasoundCart", size: [560, 560], opts: { caption: "Ultrasound" } },
   { site: "krishna-labs", file: "facility-xray.jpg", scene: "xrayRoom", size: [560, 560], opts: { caption: "X-ray" } },
+
+  // ------------------------------------------------------------------- gym
+  { site: "zoom-fitness", file: "hero-gym.jpg", scene: "gymFloor", size: [1800, 1520], opts: { caption: "Rack 2 · Patamata" } },
+  { site: "zoom-fitness", file: "gym-exterior.jpg", scene: "clinicExterior", size: [1440, 1080], opts: { sign: "ZOOM FITNESS", floor: "1st Floor, Sri Lakshmi Complex", caption: "Patamata service lane" } },
+  { site: "zoom-fitness", file: "reception.jpg", scene: "reception", size: [1440, 1080], opts: { mark: "ZF", caption: "Front desk" } },
+  { site: "zoom-fitness", file: "strength-floor.jpg", scene: "gymFloor", size: [1440, 1080], opts: { caption: "Strength floor" } },
+  { site: "zoom-fitness", file: "cardio-deck.jpg", scene: "cardioDeck", size: [1440, 1080], opts: { caption: "Cardio deck" } },
+  { site: "zoom-fitness", file: "functional-zone.jpg", scene: "functionalZone", size: [1440, 1080], opts: { caption: "Sled lane" } },
+  { site: "zoom-fitness", file: "cable-station.jpg", scene: "cableStation", size: [1440, 1080], opts: { caption: "Cable station" } },
+  { site: "zoom-fitness", file: "group-studio.jpg", scene: "groupStudio", size: [1440, 1080], opts: { caption: "Group studio" } },
+  { site: "zoom-fitness", file: "locker-room.jpg", scene: "lockerRoom", size: [1440, 1080], opts: { caption: "Locker room" } },
+
+  { site: "zoom-fitness", file: "ravi-teja-bandaru.jpg", scene: "portrait", size: [1152, 1280], opts: { variant: 1, caption: "Strength coaching" } },
+  { site: "zoom-fitness", file: "sowmya-vaddadi.jpg", scene: "portrait", size: [1152, 1280], opts: { variant: 2, caption: "Women's batch" } },
+  { site: "zoom-fitness", file: "imran-shaik.jpg", scene: "portrait", size: [1152, 1280], opts: { variant: 0, caption: "Conditioning" } },
+  { site: "zoom-fitness", file: "deepthi-alluri.jpg", scene: "portrait", size: [1152, 1280], opts: { variant: 2, caption: "Nutrition desk" } },
+
+  { site: "zoom-fitness", file: "case-fatloss-before.jpg", scene: "progressChart", size: [1440, 1080], opts: { state: "before", trend: "down", title: "Body weight · kg", caption: "Week 0 · 96.0 kg" } },
+  { site: "zoom-fitness", file: "case-fatloss-after.jpg", scene: "progressChart", size: [1440, 1080], opts: { state: "after", trend: "down", title: "Body weight · kg", caption: "Week 12 · 85.4 kg" } },
+  { site: "zoom-fitness", file: "case-strength-before.jpg", scene: "progressChart", size: [1440, 1080], opts: { state: "before", trend: "up", title: "Deadlift · kg", caption: "Month 0 · 60 kg" } },
+  { site: "zoom-fitness", file: "case-strength-after.jpg", scene: "progressChart", size: [1440, 1080], opts: { state: "after", trend: "up", title: "Deadlift · kg", caption: "Month 6 · 105 kg" } },
+  { site: "zoom-fitness", file: "case-pullup-before.jpg", scene: "progressChart", size: [1440, 1080], opts: { state: "before", trend: "up", title: "Pull-ups · reps", caption: "Month 0 · assisted" } },
+  { site: "zoom-fitness", file: "case-pullup-after.jpg", scene: "progressChart", size: [1440, 1080], opts: { state: "after", trend: "up", title: "Pull-ups · reps", caption: "Month 4 · 4 unassisted" } },
+  { site: "zoom-fitness", file: "case-postnatal-before.jpg", scene: "progressChart", size: [1440, 1080], opts: { state: "before", trend: "up", title: "Load returned · kg", caption: "Week 1 · bodyweight" } },
+  { site: "zoom-fitness", file: "case-postnatal-after.jpg", scene: "progressChart", size: [1440, 1080], opts: { state: "after", trend: "up", title: "Load returned · kg", caption: "Month 7 · full programme" } },
 ];
 
 function buildSvg(entry) {
   const scene = scenes[entry.scene];
   if (!scene) throw new Error(`Unknown scene "${entry.scene}" for ${entry.file}`);
-  const palette = entry.site === "krishna-labs" ? palettes.labs : palettes.dental;
+  const paletteBySite = { "krishna-labs": palettes.labs, "zoom-fitness": palettes.gym };
+  const palette = paletteBySite[entry.site] ?? palettes.dental;
   const [baseW, baseH] = scene.base;
   const [width, height] = entry.size;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${baseW} ${baseH}" preserveAspectRatio="xMidYMid slice">

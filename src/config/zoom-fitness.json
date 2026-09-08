@@ -1,0 +1,211 @@
+{
+  "siteId": "zoom-fitness",
+  "type": "gym",
+  "isDemo": true,
+  "siteUrl": "https://zoom-fitness-demo.example",
+  "geo": { "latitude": 16.4932, "longitude": 80.6571 },
+  "priceRevisionNote": "Fees revised January 2026",
+  "emergencyNote": "First session is free. Call to pick a morning or evening slot.",
+  "registrationLine": "Shops and Establishments Reg. No. VJA/SE/2017/11482",
+  "serviceAreas": ["Patamata", "Benz Circle", "Labbipet", "Governorpet", "Gunadala", "Poranki", "Ramavarappadu", "Auto Nagar", "Kanuru", "Moghalrajpuram", "Enikepadu", "Vidyadharapuram"],
+  "brand": { "name": "Zoom Fitness Studio", "shortName": "Zoom Fitness", "tagline": "Coached strength training in Patamata", "logoText": "ZF", "established": "Established 2017", "yearsInService": 9 },
+  "theme": { "primary": "#1F2933", "primaryDark": "#141A21", "surface": "#F1F0EC", "accent": "#DD6B20", "text": "#16181C", "muted": "#5D646D", "fontHeading": "DM Sans", "fontBody": "Inter", "radius": "8px" },
+  "contact": { "phonePrimary": "+91 91234 56780", "phoneAlt": "+91 91234 56781", "whatsapp": "+91 91234 56780", "email": "frontdesk@zoomfitness.example", "addressLine1": "1st Floor, Sri Lakshmi Complex", "addressLine2": "Patamata", "city": "Vijayawada", "state": "Andhra Pradesh", "pincode": "520010", "mapEmbedUrl": "https://www.google.com/maps?q=Patamata,+Vijayawada&output=embed", "mapDirectionsUrl": "https://www.google.com/maps/dir/?api=1&destination=Patamata,+Vijayawada", "landmark": "Ring Road service lane, 200 metres from Patamata bus stop", "parkingNote": "Two-wheeler parking in the basement. Cars park on the service lane, which clears after 6.00 PM.", "languagesLine": "Our coaches speak Telugu, Hindi and English." },
+  "hours": [
+    { "day": "Monday", "open": "05:00", "close": "22:00", "breakStart": "10:30", "breakEnd": "16:00" },
+    { "day": "Tuesday", "open": "05:00", "close": "22:00", "breakStart": "10:30", "breakEnd": "16:00" },
+    { "day": "Wednesday", "open": "05:00", "close": "22:00", "breakStart": "10:30", "breakEnd": "16:00" },
+    { "day": "Thursday", "open": "05:00", "close": "22:00", "breakStart": "10:30", "breakEnd": "16:00" },
+    { "day": "Friday", "open": "05:00", "close": "22:00", "breakStart": "10:30", "breakEnd": "16:00" },
+    { "day": "Saturday", "open": "05:00", "close": "22:00", "breakStart": "10:30", "breakEnd": "16:00" },
+    { "day": "Sunday", "open": "06:00", "close": "11:00" }
+  ],
+  "stats": [
+    { "value": "1,470", "label": "members trained" },
+    { "value": "9", "label": "years in Patamata" },
+    { "value": "4.7", "label": "from 213 reviews" },
+    { "value": "7", "label": "certified coaches" }
+  ],
+  "services": [
+    { "id": "day-pass", "name": "Day Pass", "shortDesc": "One full day on the floor, no membership needed.", "longDesc": "You get the strength floor, the cardio deck and any group class running that day. A coach walks you through the machines in the first fifteen minutes.", "price": "₹250", "priceNote": "per day", "duration": "Any open-floor hour", "featured": false, "whatsappMessage": "Hi, I want a Day Pass at Zoom Fitness. The day I want to come is:", "category": "Access", "whoNeeds": "Visitors to Vijayawada, and anyone who wants to see the floor before joining.", "visits": "1 day", "aftercare": "Keep the pass receipt. It is adjusted against your joining fee if you sign up the same week." },
+    { "id": "gym-floor", "name": "Gym Floor Membership", "shortDesc": "Full access to the strength floor and cardio deck.", "longDesc": "Train on your own schedule during open-floor hours. A coach is on the floor at all times to check your form and load. Your programme is written on paper and reviewed every four weeks.", "price": "₹1,450", "priceNote": "per month", "duration": "60 to 90 minutes", "featured": true, "whatsappMessage": "Hi, I want to join the Gym Floor Membership at Zoom Fitness. My name is:", "category": "Access", "whoNeeds": "Anyone training three or more days a week who prefers to work through a plan alone.", "visits": "Unlimited during open-floor hours", "aftercare": "Log your working sets in the card at the desk so the next review has real numbers." },
+    { "id": "personal-training", "name": "Personal Training", "shortDesc": "One coach, one plan, twelve sessions a month.", "longDesc": "You train with the same coach every session. Load, rest and technique are decided for you, and every session is recorded so progress is visible on paper rather than by feel.", "price": "₹7,200", "priceNote": "12 sessions a month", "duration": "60 minutes", "featured": true, "whatsappMessage": "Hi, I want to book Personal Training at Zoom Fitness. My name is:", "category": "Coaching", "whoNeeds": "Beginners, people returning after an injury, and anyone stuck at the same weights for months.", "visits": "3 sessions a week", "aftercare": "Eat within ninety minutes of the session and keep the rest day your coach marks on the card." },
+    { "id": "small-group-strength", "name": "Small Group Strength", "shortDesc": "Barbell training in a batch of six.", "longDesc": "Squat, press, deadlift and row, coached in a fixed batch of six people. Everyone runs the same session at their own load, so the coach can watch every rep.", "price": "₹3,400", "priceNote": "per month", "duration": "60 minutes", "featured": true, "whatsappMessage": "Hi, I want to join Small Group Strength at Zoom Fitness. My name is:", "category": "Strength", "whoNeeds": "Members who want barbell coaching without paying for one-to-one sessions.", "visits": "3 batches a week", "aftercare": "Rack the bar, wipe the bench and note your top set before you leave the rack." },
+    { "id": "circuit-conditioning", "name": "Circuit Conditioning", "shortDesc": "Eight stations, forty seconds each, no queueing.", "longDesc": "A coached circuit built from sleds, ropes, kettlebells and the assault bike. The room runs on a clock, so a full session finishes in under an hour.", "price": "₹2,100", "priceNote": "per month", "duration": "45 minutes", "featured": true, "whatsappMessage": "Hi, I want to join Circuit Conditioning at Zoom Fitness. My name is:", "category": "Conditioning", "whoNeeds": "People short on time who want the heart rate up without running outdoors.", "visits": "3 classes a week", "aftercare": "Drink 500 ml of water before you leave and stretch your calves at the wall." },
+    { "id": "womens-strength", "name": "Women's Strength Batch", "shortDesc": "A women-only batch, 7.30 AM on weekdays.", "longDesc": "The floor is reserved for the batch and coached by Sowmya. The plan starts with bodyweight and dumbbells, and moves to the barbell when your technique holds.", "price": "₹1,900", "priceNote": "per month", "duration": "60 minutes", "featured": true, "whatsappMessage": "Hi, I want to join the Women's Strength Batch at Zoom Fitness. My name is:", "category": "Strength", "whoNeeds": "Women who want a reserved floor and a coach who has trained beginners for years.", "visits": "5 batches a week", "aftercare": "Keep the mobility sheet at home and do the two hip drills on your rest days." },
+    { "id": "zumba", "name": "Zumba", "shortDesc": "An hour of choreography in the studio upstairs.", "longDesc": "A full-hour class with music, run in the mirrored studio. No steps are taught in advance, so you can walk into your first class and follow along.", "price": "₹1,600", "priceNote": "per month", "duration": "60 minutes", "featured": false, "whatsappMessage": "Hi, I want to join Zumba at Zoom Fitness. My name is:", "category": "Conditioning", "whoNeeds": "Members who want cardio that does not feel like a treadmill.", "visits": "5 classes a week", "aftercare": "Change out of wet clothes before you sit in the AC lounge." },
+    { "id": "morning-yoga", "name": "Morning Yoga", "shortDesc": "Breath, mobility and balance before work.", "longDesc": "A 6.30 AM class focused on hips, shoulders and spine. It pairs well with a strength plan and is often prescribed alongside heavy training days.", "price": "₹1,300", "priceNote": "per month", "duration": "60 minutes", "featured": false, "whatsappMessage": "Hi, I want to join Morning Yoga at Zoom Fitness. My name is:", "category": "Recovery", "whoNeeds": "Desk workers with stiff hips and lower-back tightness.", "visits": "4 classes a week", "aftercare": "Carry your own mat if you prefer, or use one of the studio mats and wipe it after." },
+    { "id": "fat-loss-12-week", "name": "12-Week Fat Loss Program", "shortDesc": "Training, diet and weekly measurement in one fee.", "longDesc": "Three coached sessions a week, a diet plan from Deepthi and a body composition check every Saturday. You get a printed sheet at week six showing what moved and what did not.", "price": "₹11,500", "priceNote": "for 12 weeks", "duration": "12 weeks", "featured": true, "whatsappMessage": "Hi, I want details of the 12-Week Fat Loss Program at Zoom Fitness. My name is:", "category": "Coaching", "whoNeeds": "Members with a specific target and a fixed date, such as a wedding or a medical review.", "visits": "3 sessions a week for 12 weeks", "aftercare": "Weigh yourself on the same morning each week, before food, on the studio scale." },
+    { "id": "diet-consult", "name": "Diet Consultation", "shortDesc": "A written plan built around what you already eat.", "longDesc": "You sit with Deepthi for forty minutes. She takes your measurements, your usual meal timings and your budget, and gives you a plan on one page.", "price": "₹900", "priceNote": "per sitting", "duration": "40 minutes", "featured": false, "whatsappMessage": "Hi, I want to book a Diet Consultation at Zoom Fitness. My name is:", "category": "Nutrition", "whoNeeds": "Anyone training regularly whose weight has not moved in eight weeks.", "visits": "1 sitting, review after 4 weeks", "aftercare": "Photograph your meals for the first week so the review has something to work with." },
+    { "id": "mobility-recovery", "name": "Mobility and Recovery", "shortDesc": "Stretching, foam rolling and joint work.", "longDesc": "A guided session for the joints that take load during the week. Useful on the day after a heavy squat or deadlift session.", "price": "₹600", "priceNote": "per session", "duration": "45 minutes", "featured": false, "whatsappMessage": "Hi, I want to book a Mobility and Recovery session at Zoom Fitness. My name is:", "category": "Recovery", "whoNeeds": "Members with knee, shoulder or lower-back stiffness that shows up during lifts.", "visits": "1 to 2 sessions a week", "aftercare": "Repeat the two drills your coach marks, at home, on the days you do not train." }
+  ],
+  "team": [
+    { "name": "Ravi Teja Bandaru", "qualification": "NSCA-CSCS, ACE Certified Personal Trainer", "specialization": "Strength and powerlifting", "experience": "11 years", "bio": "Ravi competed in state-level powerlifting for six years before he started coaching. He writes every barbell programme in the studio on paper and keeps a copy at the desk, because he does not trust an app to remember what your knee did last February.", "languages": ["Telugu", "Hindi", "English"], "photo": "/images/zoom-fitness/ravi-teja-bandaru.jpg", "photoAlt": "Ravi Teja Bandaru coaching on the strength floor", "education": ["NSCA Certified Strength and Conditioning Specialist", "ACE Certified Personal Trainer", "Level 1 Powerlifting Coach — Indian Powerlifting Federation"], "memberships": ["Indian Powerlifting Federation", "NSCA India"], "treatmentFocus": ["Squat, bench and deadlift technique", "Return to lifting after injury", "Competition preparation"] },
+    { "name": "Sowmya Vaddadi", "qualification": "ACSM Certified Personal Trainer, Pre and Post-Natal Certified", "specialization": "Women's strength and group classes", "experience": "8 years", "bio": "Sowmya runs the 7.30 AM women's batch and the Zumba floor. She started with bodyweight classes in a Labbipet apartment block and still begins every new member on the same four movements before anything gets loaded.", "languages": ["Telugu", "Hindi", "English"], "photo": "/images/zoom-fitness/sowmya-vaddadi.jpg", "photoAlt": "Sowmya Vaddadi taking the women's strength batch", "education": ["ACSM Certified Personal Trainer", "Pre and Post-Natal Exercise Certification — Fit For Birth", "Zumba Basic 1 and 2"], "memberships": ["ACSM India Chapter"], "treatmentFocus": ["Beginner barbell progressions", "Training through and after pregnancy", "Group class programming"] },
+    { "name": "Imran Shaik", "qualification": "K11 Certified Fitness Trainer", "specialization": "Fat loss and conditioning", "experience": "6 years", "bio": "Imran runs the circuit floor and the 12-week fat loss batches. He keeps the clock on the wall rather than on a phone, so a class that starts at 5.00 PM finishes at 5.45 PM and members can get back to work.", "languages": ["Telugu", "Hindi", "English", "Urdu"], "photo": "/images/zoom-fitness/imran-shaik.jpg", "photoAlt": "Imran Shaik setting up the conditioning circuit", "education": ["K11 Certified Fitness Trainer", "Kettlebell Level 1 — Indian Kettlebell League", "First Aid and CPR — St. John Ambulance"], "memberships": ["K11 Alumni Network"], "treatmentFocus": ["Circuit and interval design", "Fat loss programmes", "Sled and kettlebell work"] },
+    { "name": "Deepthi Alluri", "qualification": "MSc Nutrition and Dietetics, Registered Dietitian", "specialization": "Diet planning and body composition", "experience": "5 years", "bio": "Deepthi builds plans around what members already cook at home. She asks for a week of meal photographs before she writes anything, and she will not put a food on the sheet that is hard to buy in Patamata.", "languages": ["Telugu", "English"], "photo": "/images/zoom-fitness/deepthi-alluri.jpg", "photoAlt": "Deepthi Alluri at the nutrition desk", "education": ["MSc Nutrition and Dietetics — Acharya Nagarjuna University", "Registered Dietitian — Indian Dietetic Association", "Sports Nutrition Certification — ISSN"], "memberships": ["Indian Dietetic Association"], "treatmentFocus": ["Fat loss and maintenance plans", "Vegetarian protein planning", "Diet around shift work"] }
+  ],
+  "reviews": [
+    { "name": "Harika Nallamothu", "area": "Patamata", "rating": 5, "date": "July 2026", "text": "I joined the 7.30 AM women's batch in January. Sowmya kept me on dumbbells for five weeks before the barbell, which I did not like then and understand now. I deadlifted 50 kg last week.", "service": "Women's Strength Batch" },
+    { "name": "Venkat Sai Kolli", "area": "Benz Circle", "rating": 5, "date": "June 2026", "text": "The ₹3,900 quarterly plan was the amount billed, no extra joining fee. Ravi rewrote my squat programme after I told him about my old knee problem, and he checked the first two sessions himself.", "service": "Small Group Strength" },
+    { "name": "Praveen Kumar M.", "area": "Poranki", "rating": 5, "date": "May 2026", "text": "The 5.00 PM circuit finishes at 5.45 PM. I have never once been late back to the shop. Imran runs the clock properly and there is no waiting at any station.", "service": "Circuit Conditioning" },
+    { "name": "Sridevi Ch.", "area": "Gunadala", "rating": 4, "date": "April 2026", "text": "The diet plan from Deepthi was practical and used food we already cook. The 6.30 PM Zumba class gets crowded though, around 30 people in the studio on Wednesdays.", "service": "Zumba", "ownerReply": "Reply from Zoom Fitness: Thank you. We have added a second Wednesday Zumba slot at 9.00 AM and capped the evening class at 24 mats." },
+    { "name": "Anil Babu Devineni", "area": "Auto Nagar", "rating": 5, "date": "March 2026", "text": "I came in at 96 kg with a desk job. The 12-week program cost ₹11,500 and included the Saturday measurements. I finished at 85.4 kg and the sheet showed where the loss actually came from.", "service": "12-Week Fat Loss Program" }
+  ],
+  "gallery": [
+    { "src": "/images/zoom-fitness/gym-exterior.jpg", "alt": "Zoom Fitness Studio entrance on the Patamata service lane", "caption": "Patamata entrance", "category": "studio" },
+    { "src": "/images/zoom-fitness/reception.jpg", "alt": "Front desk and membership counter", "caption": "Front desk", "category": "studio" },
+    { "src": "/images/zoom-fitness/strength-floor.jpg", "alt": "Squat racks and barbells on the strength floor", "caption": "Strength floor", "category": "studio" },
+    { "src": "/images/zoom-fitness/cardio-deck.jpg", "alt": "Treadmills and cycles on the cardio deck", "caption": "Cardio deck", "category": "studio" },
+    { "src": "/images/zoom-fitness/functional-zone.jpg", "alt": "Sled track, kettlebells and ropes in the functional zone", "caption": "Functional zone", "category": "equipment" },
+    { "src": "/images/zoom-fitness/cable-station.jpg", "alt": "Dual cable crossover station", "caption": "Cable station", "category": "equipment" },
+    { "src": "/images/zoom-fitness/group-studio.jpg", "alt": "Mirrored group class studio with mats", "caption": "Group studio", "category": "studio" },
+    { "src": "/images/zoom-fitness/locker-room.jpg", "alt": "Locker room with changing benches", "caption": "Locker room", "category": "facilities" }
+  ],
+  "faqs": [{ "question": "Can I train before work?", "answer": "Yes. The floor opens at 5.00 AM from Monday to Saturday, and the first coached batch starts at 5.30 AM." }],
+  "seo": { "title": "Gym in Patamata, Vijayawada | Zoom Fitness Studio", "description": "Patamata gym with ₹1,450 monthly membership, coached strength batches, Zumba and personal training in Vijayawada.", "keywords": ["gym Vijayawada", "gym in Patamata", "fitness studio Vijayawada", "personal trainer Vijayawada", "Zumba class Vijayawada", "gym fees Vijayawada"], "ogImage": "/opengraph-image" },
+  "enquiryFields": [
+    { "name": "name", "label": "Name", "type": "text", "required": true, "placeholder": "Your name" },
+    { "name": "phone", "label": "Phone", "type": "tel", "required": true, "placeholder": "10-digit mobile number" },
+    { "name": "service", "label": "Program", "type": "select", "required": true, "placeholder": "Choose a program" },
+    {
+      "name": "trainingTime",
+      "label": "Training time",
+      "type": "select",
+      "required": true,
+      "placeholder": "Choose a slot",
+      "options": [
+        "5.00 to 7.00 AM",
+        "7.00 to 8.30 AM",
+        "8.30 to 10.30 AM",
+        "4.00 to 6.00 PM",
+        "6.00 to 8.00 PM",
+        "8.00 to 10.00 PM",
+        "Sunday morning only",
+        "Not decided yet"
+      ]
+    },
+    { "name": "goal", "label": "Goal", "type": "select", "placeholder": "Choose a goal", "options": ["Fat loss", "Build strength", "General fitness", "Return after a break", "Return after an injury", "Train for an event"] },
+    { "name": "message", "label": "Message", "type": "textarea", "placeholder": "Any injury, surgery or medical condition we should know about?" }
+  ],
+  "contactFaqs": [
+    { "question": "Is the first session really free?", "answer": "Yes. Walk in with shoes and a water bottle. A coach takes you around the floor and runs one full session with you." },
+    { "question": "What does it cost to join?", "answer": "Monthly is ₹1,450 with a ₹500 one-time joining fee. Quarterly is ₹3,900 and annual is ₹12,600, and both waive the joining fee." },
+    { "question": "Is there a women-only batch?", "answer": "Yes. The floor is reserved for the women's batch from 7.30 AM to 8.30 AM, Monday to Friday, and Sowmya coaches it." },
+    { "question": "Can I freeze my membership?", "answer": "Quarterly members get 15 freeze days and annual members get 45. Tell the desk before the break starts, not after." },
+    { "question": "Do you have parking?", "answer": "Two-wheelers park in the basement. Cars park on the service lane, which is easier after 6.00 PM." },
+    { "question": "Is EMI available?", "answer": "EMI is available on the annual plan through the card machine at the desk. Ask for the current bank list." }
+  ],
+  "about": {
+    "story": ["Zoom Fitness opened in 2017 with eleven machines, two racks and one rule: nobody trains without a coach watching the first four weeks.", "Members started travelling in from Benz Circle and Poranki, so the studio took the floor above in 2020 and moved the group classes upstairs. That freed the barbells for people who wanted to train heavy without waiting behind a class.", "The gym still works the same way. Your programme is written on paper, your numbers go on a card at the desk, and a coach reviews both every four weeks."],
+    "timeline": [
+      { "year": "2017", "title": "One floor in Patamata", "text": "The studio opens with eleven machines, two squat racks and three coaches." },
+      { "year": "2019", "title": "Women's morning batch", "text": "A reserved 7.30 AM floor starts after members ask for a women-only slot." },
+      { "year": "2020", "title": "Second floor added", "text": "Group classes move upstairs so the barbell area stays open through the evening." },
+      { "year": "2023", "title": "Nutrition desk opens", "text": "Diet consultations and body composition checks start running in-house." },
+      { "year": "2025", "title": "Recovery corner", "text": "A mobility and stretching area is added beside the locker rooms." }
+    ],
+    "sterilization": [
+      { "title": "Equipment wipe-down", "text": "Sanitiser bottles and cloth rolls sit at four points on the floor. Members wipe the bench and the handles after each set." },
+      { "title": "Twice-daily floor clean", "text": "The floor, mats and studio are cleaned at 10.30 AM and again at 10.00 PM, after the last batch leaves." },
+      { "title": "Machine service log", "text": "Cables, pins and belts are checked every Monday and the log is kept at the front desk for anyone to read." },
+      { "title": "First aid and coach cover", "text": "A trained coach is present in every open-floor hour, and the first aid box is checked at the start of each month." }
+    ],
+    "equipment": [
+      { "name": "4 power racks", "text": "Two with safety pins set for solo lifters, two set up for coached batches." },
+      { "name": "Olympic barbells and bumper plates", "text": "Six 20 kg bars, two 15 kg bars and bumpers so heavy sets can be dropped safely." },
+      { "name": "Dual cable crossover", "text": "Two adjustable stacks for pulldowns, rows, chest work and shoulder rehab." },
+      { "name": "11 cardio machines", "text": "Treadmills, upright cycles, a rower and two assault bikes on the deck." },
+      { "name": "Sled track", "text": "A 12-metre turf lane for pushes, pulls and carries in the conditioning circuit." },
+      { "name": "Body composition scale", "text": "Weekly checks that print weight, fat percentage and muscle mass on one slip." }
+    ]
+  },
+  "home": {
+    "hero": { "eyebrow": "Patamata · Since 2017", "heading": "A gym where somebody actually watches your form.", "subheading": "Coached strength batches, group classes and open-floor training in Patamata. Memberships start at ₹1,450 a month and the first session costs nothing.", "image": { "src": "/images/zoom-fitness/hero-gym.jpg", "alt": "Coach checking a member's squat depth on the strength floor" }, "whatsappMessage": "Hi, I want to book a free first session at Zoom Fitness. My name is:" },
+    "sections": {
+      "services": { "eyebrow": "Programs and fees", "heading": "Pick the way you want to train. The price is next to it.", "subheading": "Every fee below is the amount you pay at the desk. Nothing is added later." },
+      "whyChoose": { "eyebrow": "On the floor", "heading": "What a month at Zoom Fitness actually looks like.", "subheading": "You know your plan, your numbers and who is coaching you." },
+      "doctors": { "eyebrow": "Meet the coaches", "heading": "Seven coaches, and you train with the same one.", "subheading": "Your programme is written by the coach who watches you lift it." },
+      "beforeAfter": { "eyebrow": "Member results", "heading": "Move the handle to see where members started.", "subheading": "These are demonstration images with fictional member details. Your result depends on your training, food and sleep." },
+      "gallery": { "eyebrow": "Inside the studio", "heading": "Two floors on the Patamata service lane.", "subheading": "See the racks, the deck and the studio before you walk in." },
+      "reviews": { "eyebrow": "Member feedback", "heading": "What members say after a few months.", "subheading": "These are portfolio demonstrations using fictional member details." },
+      "location": { "eyebrow": "Find the studio", "heading": "Above Sri Lakshmi Complex, Patamata.", "parkingLabel": "Parking", "directionsLabel": "Get Directions" },
+      "appointment": { "eyebrow": "Book a free session", "heading": "Tell us when you can train.", "subheading": "We call you back within 2 hours during floor hours.", "reassuranceHeading": "You will know the plan before you pay.", "reassuranceText": "The first session is a full session, not a tour. You lift, a coach corrects you, and then we talk about which membership fits how often you can come." }
+    },
+    "whyChoose": [
+      { "heading": "A coach on the floor every hour", "text": "Someone is watching the racks whenever the gym is open, not only during class hours." },
+      { "heading": "Your programme on paper", "text": "Sets, reps and load are written on a card kept at the desk and reviewed every four weeks." },
+      { "heading": "Batches capped at six", "text": "Small Group Strength runs with six people so the coach can see every rep in the set." },
+      { "heading": "Open from 5.00 AM", "text": "Train before work Monday to Saturday, or come back between 4.00 PM and 10.00 PM." }
+    ],
+    "beforeAfter": [
+      { "beforeSrc": "/images/zoom-fitness/case-fatloss-before.jpg", "beforeAlt": "Body composition chart before the fat loss program", "afterSrc": "/images/zoom-fitness/case-fatloss-after.jpg", "afterAlt": "Body composition chart after the fat loss program", "treatment": "96.0 kg to 85.4 kg", "duration": "12 weeks" },
+      { "beforeSrc": "/images/zoom-fitness/case-strength-before.jpg", "beforeAlt": "Deadlift progress chart at the start of coaching", "afterSrc": "/images/zoom-fitness/case-strength-after.jpg", "afterAlt": "Deadlift progress chart after six months of coaching", "treatment": "Deadlift 60 kg to 105 kg", "duration": "6 months" },
+      { "beforeSrc": "/images/zoom-fitness/case-pullup-before.jpg", "beforeAlt": "Assisted pull-up progress at the start", "afterSrc": "/images/zoom-fitness/case-pullup-after.jpg", "afterAlt": "Unassisted pull-up progress after four months", "treatment": "Assisted to 4 unassisted pull-ups", "duration": "4 months" },
+      { "beforeSrc": "/images/zoom-fitness/case-postnatal-before.jpg", "beforeAlt": "Return to training chart at week one", "afterSrc": "/images/zoom-fitness/case-postnatal-after.jpg", "afterAlt": "Return to training chart at month seven", "treatment": "Return to lifting after delivery", "duration": "7 months" }
+    ],
+    "paymentNotes": ["EMI on the annual plan", "UPI / card / cash at the desk", "Joining fee waived on quarterly and annual"],
+    "googleReviews": { "label": "See all 213 reviews on Google", "url": "https://www.google.com/search?q=Zoom+Fitness+Studio+Patamata+Vijayawada+reviews" }
+  },
+  "gym": {
+    "joiningNote": "Joining fee is ₹500 on the monthly plan and waived on quarterly and annual.",
+    "inductionNote": "Every new member gets three induction sessions in the first week. A coach sets your starting loads and writes the first four weeks of your plan.",
+    "plans": [
+      { "id": "monthly", "name": "Monthly", "price": "₹1,450", "period": "per month", "joiningFee": "₹500 one time", "bestFor": "You want to see how the gym fits your week first.", "inclusions": ["Full open-floor access", "2 group classes a week", "Coach on the floor at all hours", "Programme card at the desk", "Day locker"], "whatsappMessage": "Hi, I want the monthly membership at Zoom Fitness. My name is:" },
+      { "id": "quarterly", "name": "Quarterly", "price": "₹3,900", "period": "for 3 months", "mrp": "₹4,350", "joiningFee": "Waived", "bestFor": "Most members pick this one.", "featured": true, "inclusions": ["Full open-floor access", "Unlimited group classes", "Monthly body composition check", "One diet consultation included", "15 freeze days", "2 guest passes"], "whatsappMessage": "Hi, I want the quarterly membership at Zoom Fitness. My name is:" },
+      { "id": "annual", "name": "Annual", "price": "₹12,600", "period": "for 12 months", "mrp": "₹17,400", "joiningFee": "Waived", "bestFor": "You already train four or more days a week.", "inclusions": ["Full open-floor access", "Unlimited group classes", "Body composition check twice a month", "Three diet consultations included", "45 freeze days", "6 guest passes", "Personal locker"], "whatsappMessage": "Hi, I want the annual membership at Zoom Fitness. My name is:" }
+    ],
+    "planComparison": [
+      { "feature": "Open-floor access", "values": ["All hours", "All hours", "All hours"] },
+      { "feature": "Group classes", "values": ["2 a week", "Unlimited", "Unlimited"] },
+      { "feature": "Programme card and review", "values": ["Every 4 weeks", "Every 4 weeks", "Every 4 weeks"] },
+      { "feature": "Body composition check", "values": ["₹300 each", "Once a month", "Twice a month"] },
+      { "feature": "Diet consultation", "values": ["₹900 each", "1 included", "3 included"] },
+      { "feature": "Locker", "values": ["Day locker", "Day locker", "Personal locker"] },
+      { "feature": "Freeze days", "values": ["None", "15 days", "45 days"] },
+      { "feature": "Guest passes", "values": ["None", "2", "6"] },
+      { "feature": "Joining fee", "values": ["₹500", "Waived", "Waived"] }
+    ],
+    "addOns": [
+      { "name": "Personal training", "price": "₹7,200", "note": "12 sessions a month with one coach, added to any plan." },
+      { "name": "Personal locker", "price": "₹250", "note": "Per month, ground floor rack beside the changing room." },
+      { "name": "Diet plan review", "price": "₹900", "note": "One sitting with Deepthi, including a written one-page plan." },
+      { "name": "Body composition check", "price": "₹300", "note": "Weight, fat percentage and muscle mass on a printed slip." },
+      { "name": "Guest pass", "price": "₹250", "note": "One weekday for a friend, booked at the desk a day ahead." }
+    ],
+    "timetable": [
+      { "slot": "05.30 – 06.30 AM", "classes": ["Strength Batch A", "Circuit Conditioning", "Strength Batch A", "Circuit Conditioning", "Strength Batch A", "Circuit Conditioning", "—"] },
+      { "slot": "06.30 – 07.30 AM", "classes": ["Morning Yoga", "Strength Batch B", "Morning Yoga", "Strength Batch B", "Morning Yoga", "Morning Yoga", "Open floor"] },
+      { "slot": "07.30 – 08.30 AM", "classes": ["Women's Strength", "Women's Strength", "Women's Strength", "Women's Strength", "Women's Strength", "Open floor", "Open floor"] },
+      { "slot": "09.00 – 10.00 AM", "classes": ["Zumba", "Open floor", "Zumba", "Open floor", "Zumba", "Zumba", "Mobility and Recovery"] },
+      { "slot": "05.00 – 06.00 PM", "classes": ["Circuit Conditioning", "Small Group Strength", "Circuit Conditioning", "Small Group Strength", "Circuit Conditioning", "Small Group Strength", "—"] },
+      { "slot": "06.00 – 07.00 PM", "classes": ["Zumba", "Zumba", "Zumba", "Zumba", "Zumba", "Open floor", "—"] },
+      { "slot": "07.00 – 08.00 PM", "classes": ["Small Group Strength", "Mobility and Recovery", "Small Group Strength", "Mobility and Recovery", "Small Group Strength", "Open floor", "—"] },
+      { "slot": "08.00 – 09.30 PM", "classes": ["Open floor", "Open floor", "Open floor", "Open floor", "Open floor", "Open floor", "—"] }
+    ],
+    "timetableNote": "Class slots are held for members who book at the desk by 9.00 PM the previous night. Open floor means the racks and deck are free to use with a coach present.",
+    "classes": [
+      { "name": "Strength Batch A", "text": "Squat and press day, run off the programme card. Loads move up only when the last set was clean.", "coach": "Ravi Teja Bandaru", "level": "All levels", "duration": "60 minutes" },
+      { "name": "Strength Batch B", "text": "Deadlift and row day. The batch is capped at six so the coach sees every pull.", "coach": "Ravi Teja Bandaru", "level": "3 months and above", "duration": "60 minutes" },
+      { "name": "Women's Strength", "text": "A reserved floor from 7.30 AM. Bodyweight and dumbbells first, barbell when your technique holds.", "coach": "Sowmya Vaddadi", "level": "Beginner friendly", "duration": "60 minutes" },
+      { "name": "Circuit Conditioning", "text": "Eight stations on a clock. Sled, rope, kettlebell and bike, with no queueing between rounds.", "coach": "Imran Shaik", "level": "All levels", "duration": "45 minutes" },
+      { "name": "Zumba", "text": "An hour of choreography upstairs. Walk in without knowing the steps and follow the front row.", "coach": "Sowmya Vaddadi", "level": "All levels", "duration": "60 minutes" },
+      { "name": "Mobility and Recovery", "text": "Foam rolling, hip and shoulder drills, and the stretches your coach marks on your card.", "coach": "Imran Shaik", "level": "All levels", "duration": "45 minutes" }
+    ],
+    "floor": [
+      { "name": "Strength floor", "count": "4 racks · 6 barbells", "text": "Power racks, benches, a deadlift platform and dumbbells from 2 kg to 50 kg.", "photo": "/images/zoom-fitness/strength-floor.jpg", "photoAlt": "Squat racks and benches on the strength floor" },
+      { "name": "Cardio deck", "count": "11 machines", "text": "Treadmills, cycles, a rower and two assault bikes, facing the road-side windows.", "photo": "/images/zoom-fitness/cardio-deck.jpg", "photoAlt": "Treadmills and cycles on the cardio deck" },
+      { "name": "Functional zone", "count": "1,100 sq ft", "text": "A 12-metre sled lane, kettlebells, battle ropes and turf for carries and drags.", "photo": "/images/zoom-fitness/functional-zone.jpg", "photoAlt": "Sled lane and kettlebells in the functional zone" },
+      { "name": "Group studio", "count": "24 mats", "text": "The mirrored first-floor room where Zumba, yoga and mobility classes run.", "photo": "/images/zoom-fitness/group-studio.jpg", "photoAlt": "Mirrored group studio with mats laid out" },
+      { "name": "Locker rooms", "count": "2 rooms", "text": "Separate changing rooms with showers, day lockers and a personal locker rack.", "photo": "/images/zoom-fitness/locker-room.jpg", "photoAlt": "Locker room with changing benches" }
+    ],
+    "rules": [
+      { "title": "Rack your plates", "text": "Strip the bar and return plates to the tree before you leave the rack. The next batch starts on the hour." },
+      { "title": "Wipe the bench", "text": "Sanitiser and cloth rolls sit at four points on the floor. Use them on benches, handles and mats." },
+      { "title": "Indoor shoes only", "text": "Change into clean shoes at the entrance. Street shoes damage the turf and the studio floor." },
+      { "title": "One set, one phone", "text": "Filming your own set is fine. Keep the phone off the rack and out of other members' frames." },
+      { "title": "Tell the coach about pain", "text": "Report any pain during a lift the same session. The coach adjusts the load rather than removing the exercise." },
+      { "title": "Book classes the night before", "text": "Class slots are held until 9.00 PM the previous night, then opened to walk-ins." }
+    ]
+  }
+}

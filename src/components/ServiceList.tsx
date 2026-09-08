@@ -5,9 +5,33 @@ import { Icon } from "@/components/Icon";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
 import type { SiteConfig } from "@/types/site";
 
-type DentalServicesProps = Pick<SiteConfig, "contact" | "services" | "priceRevisionNote">;
+type ServiceListProps = Pick<SiteConfig, "contact" | "services" | "priceRevisionNote"> & {
+  variant?: "dental" | "gym";
+};
 
-export function DentalServices({ contact, services, priceRevisionNote }: DentalServicesProps) {
+// Row labels are the only thing that changes between businesses. The shape of a
+// service — price, duration, how often, aftercare — is the same either way.
+const copy = {
+  dental: {
+    filterLabel: "Filter treatments by category",
+    who: "Who needs it",
+    duration: "Time",
+    visits: "Visits",
+    price: "Price",
+    aftercare: "Aftercare",
+  },
+  gym: {
+    filterLabel: "Filter programs by category",
+    who: "Who it suits",
+    duration: "Session",
+    visits: "How often",
+    price: "Fee",
+    aftercare: "After the session",
+  },
+} as const;
+
+export function ServiceList({ contact, services, priceRevisionNote, variant = "dental" }: ServiceListProps) {
+  const words = copy[variant];
   const categories = useMemo(
     () => ["All", ...Array.from(new Set(services.map((service) => service.category).filter((item): item is string => Boolean(item))))],
     [services],
@@ -20,7 +44,7 @@ export function DentalServices({ contact, services, priceRevisionNote }: DentalS
   return (
     <>
       <div className="sticky top-[var(--header-h)] z-30 -mx-5 mb-8 overflow-x-auto border-y border-[var(--color-text)]/10 bg-white/95 px-5 py-3 backdrop-blur-[2px] sm:-mx-8 sm:px-8">
-        <div className="mx-auto flex w-max min-w-full max-w-7xl gap-2" role="tablist" aria-label="Filter treatments by category">
+        <div className="mx-auto flex w-max min-w-full max-w-7xl gap-2" role="tablist" aria-label={words.filterLabel}>
           {categories.map((item) => (
             <button
               aria-selected={category === item}
@@ -87,14 +111,14 @@ export function DentalServices({ contact, services, priceRevisionNote }: DentalS
                     <div>
                       <p className="text-sm leading-7 text-[var(--color-muted)]">{service.longDesc}</p>
                       <p className="mt-4 text-sm leading-6 text-[var(--color-muted)]">
-                        <strong className="text-[var(--color-text)]">Who needs it:</strong> {service.whoNeeds}
+                        <strong className="text-[var(--color-text)]">{words.who}:</strong> {service.whoNeeds}
                       </p>
                     </div>
 
                     <dl className="grid h-fit gap-3 text-sm">
                       {[
-                        { term: "Time", value: service.duration },
-                        { term: "Visits", value: service.visits },
+                        { term: words.duration, value: service.duration },
+                        { term: words.visits, value: service.visits },
                       ].map((row) => (
                         <div className="flex justify-between gap-4 border-b border-[var(--color-text)]/10 pb-3" key={row.term}>
                           <dt className="font-bold">{row.term}</dt>
@@ -102,7 +126,7 @@ export function DentalServices({ contact, services, priceRevisionNote }: DentalS
                         </div>
                       ))}
                       <div className="flex justify-between gap-4 border-b border-[var(--color-text)]/10 pb-3">
-                        <dt className="font-bold">Price</dt>
+                        <dt className="font-bold">{words.price}</dt>
                         <dd className="text-right font-bold text-[var(--color-primary)]">
                           {service.price} {service.priceNote}
                         </dd>
@@ -110,7 +134,7 @@ export function DentalServices({ contact, services, priceRevisionNote }: DentalS
                     </dl>
 
                     <p className="border-l-2 border-[var(--color-accent)] pl-3 text-sm leading-6 text-[var(--color-muted)]">
-                      <strong className="text-[var(--color-text)]">Aftercare:</strong> {service.aftercare}
+                      <strong className="text-[var(--color-text)]">{words.aftercare}:</strong> {service.aftercare}
                     </p>
 
                     <WhatsAppLink

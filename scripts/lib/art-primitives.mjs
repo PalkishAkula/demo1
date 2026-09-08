@@ -20,6 +20,15 @@ export const palettes = {
     accent: "#F2A50C",
     light: "#FFFFFF",
   },
+  gym: {
+    bg: "#F1F0EC",
+    soft: "#DFDDD5",
+    ink: "#141A21",
+    mid: "#1F2933",
+    tint: "#C6CCD3",
+    accent: "#DD6B20",
+    light: "#FFFFFF",
+  },
 };
 
 export function dotGrid(x, y, w, h, color, step = 26, r = 1.6, opacity = 0.35) {

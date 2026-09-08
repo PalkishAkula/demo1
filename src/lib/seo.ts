@@ -46,7 +46,7 @@ export function businessSchema(site: SiteConfig): JsonLdValue {
   if (site.type === "portfolio") return { "@context": "https://schema.org", "@type": "ProfessionalService", name: site.brand.name, "@id": `${site.siteUrl}/#business`, url: site.siteUrl, image: new URL(site.seo.ogImage, site.siteUrl).toString(), telephone: site.contact.phonePrimary, email: site.contact.email, areaServed: "Vijayawada", address: { "@type": "PostalAddress", addressLocality: site.contact.city, addressRegion: site.contact.state, postalCode: site.contact.pincode, addressCountry: "IN" } };
   const core = {
     "@context": "https://schema.org",
-    "@type": site.type === "dental" ? "Dentist" : "MedicalClinic",
+    "@type": site.type === "dental" ? "Dentist" : site.type === "gym" ? "ExerciseGym" : "MedicalClinic",
     name: site.brand.name,
     "@id": `${site.siteUrl}/#business`,
     url: site.siteUrl,
@@ -56,10 +56,17 @@ export function businessSchema(site: SiteConfig): JsonLdValue {
     address: { "@type": "PostalAddress", streetAddress: `${site.contact.addressLine1}, ${site.contact.addressLine2}`, addressLocality: site.contact.city, addressRegion: site.contact.state, postalCode: site.contact.pincode, addressCountry: "IN" },
     geo: { "@type": "GeoCoordinates", latitude: site.geo.latitude, longitude: site.geo.longitude },
     openingHoursSpecification: openingHoursSpecification(site),
-    priceRange: site.type === "dental" ? "₹200–₹75,000" : "₹120–₹8,500",
+    priceRange: site.type === "dental" ? "₹200–₹75,000" : site.type === "gym" ? "₹250–₹12,600" : "₹120–₹8,500",
     aggregateRating: rating(site),
   };
   if (site.type === "dental") return { ...core, medicalSpecialty: ["Dentistry", "Prosthodontics", "Orthodontics"] };
+  if (site.type === "gym")
+    return {
+      ...core,
+      additionalType: "https://schema.org/SportsActivityLocation",
+      amenityFeature: (site.gym?.floor ?? []).map((zone) => ({ "@type": "LocationFeatureSpecification", name: zone.name, value: true })),
+      makesOffer: (site.gym?.plans ?? []).map((plan) => ({ "@type": "Offer", name: `${plan.name} membership`, price: plan.price.replace(/[^\d]/g, ""), priceCurrency: "INR" })),
+    };
   return { ...core, additionalType: "https://schema.org/DiagnosticLab", availableService: (site.diagnostics?.packages ?? []).map((item) => ({ "@type": "Service", name: item.name, offers: { "@type": "Offer", price: item.price.replace(/[^\d]/g, ""), priceCurrency: "INR" } })) };
 }
 

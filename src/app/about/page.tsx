@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Icon } from "@/components/Icon";
+import { Icon, type IconName } from "@/components/Icon";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { Section } from "@/components/Section";
@@ -13,11 +13,13 @@ import type { SiteConfig } from "@/types/site";
 
 export function generateMetadata(): Metadata {
   const site = getSite();
-  const locality = site.type === "diagnostics" ? "Governorpet" : "Benz Circle";
+  const locality = site.type === "diagnostics" ? "Governorpet" : site.type === "gym" ? "Patamata" : "Benz Circle";
+  const noun = site.type === "gym" ? "gym" : "practice";
+  const fromPrice = site.type === "gym" ? "₹250" : site.type === "diagnostics" ? "₹120" : "₹200";
   return pageMetadata(site, {
     path: "/about",
     title: `About ${site.brand.name} | Vijayawada`,
-    description: `${locality}, Vijayawada practice established in ${site.brand.yearsInService > 15 ? "2008" : "2011"} with stated prices from ₹200.`,
+    description: `${locality}, Vijayawada ${noun} ${site.brand.established.toLowerCase()} with stated prices from ${fromPrice}.`,
   });
 }
 
@@ -27,27 +29,42 @@ export default function AboutPage() {
   if (!about || site.type === "portfolio") notFound();
 
   const isLab = site.type === "diagnostics";
+  const isGym = site.type === "gym";
 
   return (
     <SiteShell site={site}>
       <PageHero
         aside={
           <Image
-            alt={isLab ? "Krishna Path Labs on MG Road, Governorpet" : "Sridevi Dental at Benz Circle, Vijayawada"}
+            alt={
+              isLab
+                ? "Krishna Path Labs on MG Road, Governorpet"
+                : isGym
+                  ? "Zoom Fitness Studio on the Patamata service lane"
+                  : "Sridevi Dental at Benz Circle, Vijayawada"
+            }
             className="w-full rounded-[8px] object-cover shadow-[var(--shadow-float)]"
             height={600}
             sizes="(max-width: 1024px) 100vw, 40vw"
-            src={isLab ? "/images/krishna-labs/lab-exterior.jpg" : "/images/sridevi-dental/clinic-exterior.jpg"}
+            src={
+              isLab
+                ? "/images/krishna-labs/lab-exterior.jpg"
+                : isGym
+                  ? "/images/zoom-fitness/gym-exterior.jpg"
+                  : "/images/sridevi-dental/clinic-exterior.jpg"
+            }
             width={800}
           />
         }
         breadcrumb="About"
-        eyebrow={isLab ? "About the centre" : "Our clinic"}
+        eyebrow={isLab ? "About the centre" : isGym ? "Our studio" : "Our clinic"}
         subtitle={site.contact.landmark}
         title={
           isLab
             ? "A Governorpet lab for routine testing, imaging and practical report access."
-            : "A Vijayawada dental practice built one careful visit at a time."
+            : isGym
+              ? "A Patamata gym built around coaching, not equipment counts."
+              : "A Vijayawada dental practice built one careful visit at a time."
         }
       />
 
@@ -58,7 +75,9 @@ export default function AboutPage() {
         heading={
           isLab
             ? "Built around clear reporting and timely collection."
-            : "From one chair in Governorpet to a team at Benz Circle."
+            : isGym
+              ? "From eleven machines to two floors on the service lane."
+              : "From one chair in Governorpet to a team at Benz Circle."
         }
       >
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
@@ -88,10 +107,14 @@ export default function AboutPage() {
 
       {about.sterilization && about.sterilization.length > 0 && (
         <Section
-          eyebrow="Sterilisation"
+          eyebrow={isGym ? "Hygiene and safety" : "Sterilisation"}
           ground="dots"
-          heading="The steps behind every prepared treatment room."
-          subheading="Instruments are tracked from the moment they leave the chair until the pouch is opened in front of you."
+          heading={isGym ? "How the floor is kept clean and safe." : "The steps behind every prepared treatment room."}
+          subheading={
+            isGym
+              ? "Equipment is wiped between sets, serviced on a schedule and a coach is present in every open hour."
+              : "Instruments are tracked from the moment they leave the chair until the pouch is opened in front of you."
+          }
           variant="surface"
         >
           <Reveal className="grid gap-px border border-[var(--color-text)]/12 bg-[var(--color-text)]/12 md:grid-cols-2" stagger={80}>
@@ -114,12 +137,14 @@ export default function AboutPage() {
           heading={
             isLab
               ? "The instruments behind routine test processing."
-              : "Tools that help you see what is happening before treatment starts."
+              : isGym
+                ? "What is actually on the floor, counted."
+                : "Tools that help you see what is happening before treatment starts."
           }
         >
           <Reveal className="grid gap-4 md:grid-cols-2 lg:grid-cols-3" stagger={70}>
             {about.equipment.map((item) => (
-              <EquipmentCard item={item} key={item.name} />
+              <EquipmentCard icon={isGym ? "dumbbell" : "microscope"} item={item} key={item.name} />
             ))}
           </Reveal>
         </Section>
@@ -128,10 +153,16 @@ export default function AboutPage() {
   );
 }
 
-function EquipmentCard({ item }: { item: NonNullable<NonNullable<SiteConfig["about"]>["equipment"]>[number] }) {
+function EquipmentCard({
+  item,
+  icon,
+}: {
+  item: NonNullable<NonNullable<SiteConfig["about"]>["equipment"]>[number];
+  icon: IconName;
+}) {
   return (
     <article className="lift flex h-full flex-col border border-[var(--color-text)]/10 bg-white p-6">
-      <Icon className="size-6 text-[var(--color-primary)]" name="microscope" />
+      <Icon className="size-6 text-[var(--color-primary)]" name={icon} />
       <h3 className="mt-5 font-[family-name:var(--font-heading-active)] text-2xl leading-tight">{item.name}</h3>
       <p className="mt-3 text-sm leading-6 text-[var(--color-muted)]">{item.text}</p>
     </article>

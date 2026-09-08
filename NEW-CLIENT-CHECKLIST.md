@@ -4,7 +4,7 @@ Use this order to keep a standard local-business launch under 45 minutes once th
 
 1. Collect the intake answers: business name, phone, WhatsApp, address, working hours, locality, prices, services, team, reviews, preferred colours, and domain owner email.
 2. Collect 8–12 real photos. Compress each to WebP or AVIF, preserve clear filenames, and keep the hero image at least 1600px wide.
-3. Run `node scripts/new-site.mjs` and duplicate the nearest dental or diagnostics config.
+3. Run `node scripts/new-site.mjs` and duplicate the nearest dental, diagnostics or gym config.
 4. Replace brand, address, phone, WhatsApp, hours, locality references, and every published price.
 5. Replace theme colours, logo mark, and the two selected fonts if needed. Check body text stays at 4.5:1 contrast.
 6. Replace every image path and alt description under `public/images/<site-id>/`.

@@ -1,4 +1,4 @@
-export type SiteType = "dental" | "diagnostics" | "portfolio";
+export type SiteType = "dental" | "diagnostics" | "gym" | "portfolio";
 
 export type FontName =
   | "Fraunces"
@@ -182,6 +182,32 @@ export interface SiteConfig {
       reportPromise: string;
     };
     pathologist: { name: string; qualification: string; experience: string; photo: string; bio: string; signedReportNote: string };
+  };
+  gym?: {
+    /** Sits under the hero as the joining offer strip on the membership page. */
+    joiningNote: string;
+    inductionNote: string;
+    plans: {
+      id: string;
+      name: string;
+      price: string;
+      period: string;
+      mrp?: string;
+      joiningFee: string;
+      bestFor: string;
+      featured?: boolean;
+      inclusions: string[];
+      whatsappMessage: string;
+    }[];
+    /** One row per feature, one value per plan, in plan order. */
+    planComparison: { feature: string; values: string[] }[];
+    addOns: { name: string; price: string; note: string }[];
+    /** Seven values per row: Monday to Sunday. "—" means no class in that slot. */
+    timetable: { slot: string; classes: string[] }[];
+    timetableNote: string;
+    classes: { name: string; text: string; coach: string; level: string; duration: string }[];
+    floor: { name: string; count: string; text: string; photo: string; photoAlt?: string }[];
+    rules: { title: string; text: string }[];
   };
   portfolio?: {
     ownerName: string;

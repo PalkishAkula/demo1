@@ -7,14 +7,15 @@
 3. Add the GitHub repository as `origin`, then run `git push -u origin main`.
 4. Keep `.env.local` out of Git. Each Vercel project stores its own environment values.
 
-## 2. Create the three Vercel projects
+## 2. Create the four Vercel projects
 
-Create three separate Vercel projects. Each imports the same GitHub repository and uses the default Next.js build settings.
+Create four separate Vercel projects. Each imports the same GitHub repository and uses the default Next.js build settings.
 
 | Vercel project name | Production domain | `NEXT_PUBLIC_SITE_ID` |
 | --- | --- | --- |
 | `sridevi-dental` | `sridevi-dental.vercel.app` | `sridevi-dental` |
 | `krishna-path-labs` | `krishna-path-labs.vercel.app` | `krishna-labs` |
+| `zoom-fitness` | `zoom-fitness.vercel.app` | `zoom-fitness` |
 | `local-site-studio` | `local-site-studio.vercel.app` | `portfolio` |
 
 For each project:
@@ -91,7 +92,8 @@ Then confirm each site renders its own content, theme and metadata:
 ```bash
 NEXT_PUBLIC_SITE_ID=sridevi-dental npm run build && npx next start -p 3111
 NEXT_PUBLIC_SITE_ID=krishna-labs   npm run build && npx next start -p 3112
-NEXT_PUBLIC_SITE_ID=portfolio      npm run build && npx next start -p 3113
+NEXT_PUBLIC_SITE_ID=zoom-fitness   npm run build && npx next start -p 3113
+NEXT_PUBLIC_SITE_ID=portfolio      npm run build && npx next start -p 3114
 ```
 
 For each one, check on a 375px-wide window:

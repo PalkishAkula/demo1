@@ -583,3 +583,298 @@ export const homeVisit = scene(SQUARE, (p, opts = {}) => `
   <path d="M470 440 h140 M540 400 v80" stroke="${p.light}" stroke-width="18" stroke-linecap="round"/>
   ${label(80, 960, opts.caption ?? "Home collection", p)}
 `);
+
+/* --------------------------------------------------------------------- gym */
+
+// A loaded barbell drawn from the side. Used on the rack and on the platform.
+function barbell(x, y, halfLength, p) {
+  return `<g>
+    <line x1="${x - halfLength}" y1="${y}" x2="${x + halfLength}" y2="${y}" stroke="${p.ink}" stroke-width="12" stroke-linecap="round"/>
+    ${[0, 1].map((side) => {
+      const dir = side === 0 ? -1 : 1;
+      const outer = x + dir * (halfLength - 26);
+      const inner = x + dir * (halfLength - 74);
+      return `<rect x="${Math.min(outer, inner) - 4}" y="${y - 74}" width="26" height="148" rx="6" fill="${p.accent}"/>
+        <rect x="${Math.min(outer, inner) + 30}" y="${y - 54}" width="22" height="108" rx="6" fill="${p.mid}"/>`;
+    }).join("")}
+  </g>`;
+}
+
+function kettlebell(x, y, scale, p, fill) {
+  return `<g transform="translate(${x} ${y}) scale(${scale})">
+    <path d="M-26 -34 q0 -34 26 -34 q26 0 26 34" fill="none" stroke="${p.ink}" stroke-width="14" stroke-linecap="round"/>
+    <path d="M-42 -20 q42 -16 84 0 q16 40 0 74 q-42 14 -84 0 q-16 -34 0 -74 Z" fill="${fill}"/>
+  </g>`;
+}
+
+export const gymFloor = scene(WIDE, (p, opts = {}) => `
+  ${dotGrid(0, 0, 1440, 1080, p.ink, 34, 1.8, 0.12)}
+  <rect x="0" y="790" width="1440" height="290" fill="${p.soft}"/>
+  ${rules(0, 820, 1440, 4, 66, p.ink, 0.14)}
+
+  <!-- mirror wall -->
+  <rect x="60" y="130" width="420" height="380" fill="${p.tint}" stroke="${p.ink}" stroke-width="6"/>
+  <g stroke="${p.light}" stroke-width="16" opacity="0.55" stroke-linecap="round">
+    <line x1="110" y1="470" x2="300" y2="180"/>
+    <line x1="200" y1="480" x2="360" y2="236"/>
+  </g>
+
+  <!-- dumbbell rack -->
+  <rect x="60" y="600" width="420" height="20" rx="6" fill="${p.ink}"/>
+  <rect x="60" y="712" width="420" height="20" rx="6" fill="${p.ink}"/>
+  <rect x="64" y="600" width="18" height="196" fill="${p.ink}"/>
+  <rect x="458" y="600" width="18" height="196" fill="${p.ink}"/>
+  ${[0, 1].map((row) =>
+    [0, 1, 2, 3, 4].map((i) => {
+      const x = 108 + i * 74;
+      const y = 570 + row * 112;
+      const fill = i % 2 === 0 ? p.mid : p.accent;
+      return `<g><line x1="${x}" y1="${y}" x2="${x + 44}" y2="${y}" stroke="${p.ink}" stroke-width="9"/>
+        <rect x="${x - 10}" y="${y - 20}" width="18" height="40" rx="5" fill="${fill}"/>
+        <rect x="${x + 36}" y="${y - 20}" width="18" height="40" rx="5" fill="${fill}"/></g>`;
+    }).join(""),
+  ).join("")}
+
+  <!-- power rack -->
+  <rect x="620" y="160" width="26" height="640" fill="${p.ink}"/>
+  <rect x="1000" y="160" width="26" height="640" fill="${p.ink}"/>
+  <rect x="620" y="160" width="406" height="26" fill="${p.ink}"/>
+  <rect x="588" y="778" width="90" height="24" rx="6" fill="${p.ink}"/>
+  <rect x="968" y="778" width="90" height="24" rx="6" fill="${p.ink}"/>
+  <g fill="${p.bg}">
+    ${[0, 1, 2, 3, 4, 5, 6].map((i) => `<circle cx="633" cy="${262 + i * 66}" r="6"/><circle cx="1013" cy="${262 + i * 66}" r="6"/>`).join("")}
+  </g>
+  ${barbell(823, 358, 320, p)}
+
+  <!-- flat bench inside the rack -->
+  <rect x="700" y="640" width="250" height="26" rx="8" fill="${p.mid}"/>
+  <rect x="712" y="666" width="22" height="134" fill="${p.ink}"/>
+  <rect x="916" y="666" width="22" height="134" fill="${p.ink}"/>
+
+  <!-- plate tree -->
+  <rect x="1216" y="420" width="24" height="380" fill="${p.ink}"/>
+  <rect x="1160" y="782" width="136" height="20" rx="6" fill="${p.ink}"/>
+  ${[0, 1, 2].map((i) => {
+    const y = 470 + i * 110;
+    const r = 56 - i * 8;
+    return `<line x1="1240" y1="${y}" x2="1310" y2="${y}" stroke="${p.ink}" stroke-width="10"/>
+      <circle cx="1288" cy="${y}" r="${r}" fill="${i === 0 ? p.accent : p.mid}"/>
+      <circle cx="1288" cy="${y}" r="${r / 3}" fill="${p.bg}"/>`;
+  }).join("")}
+
+  ${label(60, 946, opts.caption ?? "Strength floor", p)}
+`);
+
+export const cardioDeck = scene(WIDE, (p, opts = {}) => `
+  ${dotGrid(0, 0, 1440, 1080, p.ink, 34, 1.8, 0.12)}
+  <rect x="0" y="800" width="1440" height="280" fill="${p.soft}"/>
+  ${windowPane(90, 130, 330, 250, p)}
+  ${windowPane(555, 130, 330, 250, p)}
+  ${windowPane(1020, 130, 330, 250, p)}
+  ${[0, 1, 2].map((i) => {
+    const x = 110 + i * 430;
+    return `<g>
+      <rect x="${x}" y="560" width="300" height="42" rx="10" fill="${p.mid}"/>
+      <rect x="${x + 16}" y="602" width="24" height="200" fill="${p.ink}"/>
+      <rect x="${x + 256}" y="602" width="24" height="200" fill="${p.ink}"/>
+      <rect x="${x + 22}" y="574" width="256" height="14" rx="7" fill="${p.ink}" opacity="0.5"/>
+      <rect x="${x + 44}" y="360" width="18" height="212" fill="${p.ink}"/>
+      <rect x="${x + 228}" y="360" width="18" height="212" fill="${p.ink}"/>
+      <rect x="${x + 30}" y="300" width="230" height="76" rx="8" fill="${p.ink}"/>
+      <rect x="${x + 46}" y="316" width="198" height="44" rx="4" fill="${p.tint}"/>
+      <rect x="${x + 58}" y="330" width="${i === 1 ? 130 : 84}" height="16" rx="8" fill="${p.accent}"/>
+      <line x1="${x + 30}" y1="430" x2="${x + 260}" y2="430" stroke="${p.ink}" stroke-width="12" stroke-linecap="round"/>
+    </g>`;
+  }).join("")}
+  <rect x="0" y="800" width="1440" height="14" fill="${p.ink}" opacity="0.35"/>
+  ${label(90, 946, opts.caption ?? "Cardio deck", p)}
+`);
+
+export const functionalZone = scene(WIDE, (p, opts = {}) => `
+  ${dotGrid(0, 0, 1440, 1080, p.ink, 34, 1.8, 0.12)}
+  <rect x="0" y="800" width="1440" height="280" fill="${p.soft}"/>
+
+  <!-- rig frame on the back wall -->
+  <rect x="120" y="130" width="26" height="620" fill="${p.ink}"/>
+  <rect x="700" y="130" width="26" height="620" fill="${p.ink}"/>
+  <rect x="120" y="130" width="606" height="26" fill="${p.ink}"/>
+  <g stroke="${p.ink}" stroke-width="14" stroke-linecap="round">
+    ${[0, 1, 2, 3, 4, 5].map((i) => `<line x1="180" y1="${240 + i * 74}" x2="666" y2="${240 + i * 74}"/>`).join("")}
+  </g>
+  <line x1="420" y1="156" x2="420" y2="470" stroke="${p.ink}" stroke-width="10"/>
+  <rect x="360" y="470" width="120" height="20" rx="10" fill="${p.accent}"/>
+
+  <!-- turf lane and sled -->
+  <rect x="60" y="700" width="1320" height="120" rx="8" fill="${p.mid}"/>
+  <g stroke="${p.accent}" stroke-width="7" stroke-dasharray="46 34" opacity="0.85">
+    <line x1="90" y1="760" x2="1350" y2="760"/>
+  </g>
+  <g>
+    <path d="M900 700 L1010 700 L1040 796 L870 796 Z" fill="${p.ink}"/>
+    <rect x="936" y="580" width="20" height="128" fill="${p.ink}"/>
+    <circle cx="946" cy="566" r="42" fill="${p.accent}"/>
+    <circle cx="946" cy="566" r="14" fill="${p.mid}"/>
+  </g>
+
+  <!-- kettlebells and ropes -->
+  ${kettlebell(1140, 640, 1.5, p, p.mid)}
+  ${kettlebell(1250, 648, 1.2, p, p.accent)}
+  ${kettlebell(1340, 654, 1.0, p, p.mid)}
+  <g fill="none" stroke="${p.ink}" stroke-width="16" stroke-linecap="round" opacity="0.9">
+    <path d="M726 300 q90 60 30 120 q-60 60 30 120 q60 40 150 30"/>
+    <path d="M726 340 q90 60 30 120 q-60 60 30 120 q60 40 150 26"/>
+  </g>
+  ${label(60, 946, opts.caption ?? "Functional zone", p)}
+`);
+
+export const cableStation = scene(WIDE, (p, opts = {}) => `
+  ${dotGrid(0, 0, 1440, 1080, p.ink, 34, 1.8, 0.12)}
+  <rect x="0" y="790" width="1440" height="290" fill="${p.soft}"/>
+  ${windowPane(1090, 150, 270, 230, p)}
+  <rect x="240" y="140" width="30" height="660" fill="${p.ink}"/>
+  <rect x="900" y="140" width="30" height="660" fill="${p.ink}"/>
+  <rect x="240" y="140" width="690" height="30" fill="${p.ink}"/>
+  <rect x="196" y="778" width="118" height="24" rx="6" fill="${p.ink}"/>
+  <rect x="856" y="778" width="118" height="24" rx="6" fill="${p.ink}"/>
+
+  <!-- weight stacks -->
+  ${[0, 1].map((side) => {
+    const x = side === 0 ? 268 : 792;
+    return `<g>
+      <rect x="${x}" y="300" width="140" height="480" fill="${p.mid}"/>
+      ${[0, 1, 2, 3, 4, 5, 6, 7].map((i) => `<rect x="${x + 10}" y="${318 + i * 56}" width="120" height="42" rx="6" fill="${i < 3 ? p.accent : p.ink}" opacity="${i < 3 ? 0.9 : 0.75}"/>`).join("")}
+      <rect x="${x + 62}" y="180" width="16" height="150" fill="${p.ink}"/>
+    </g>`;
+  }).join("")}
+
+  <!-- pulleys, cables and handles -->
+  <circle cx="330" cy="210" r="24" fill="${p.bg}" stroke="${p.ink}" stroke-width="10"/>
+  <circle cx="850" cy="210" r="24" fill="${p.bg}" stroke="${p.ink}" stroke-width="10"/>
+  <g stroke="${p.ink}" stroke-width="7" fill="none">
+    <path d="M330 234 L330 430 L520 470"/>
+    <path d="M850 234 L850 430 L660 470"/>
+  </g>
+  <g fill="${p.accent}">
+    <rect x="486" y="454" width="52" height="20" rx="10"/>
+    <rect x="642" y="454" width="52" height="20" rx="10"/>
+  </g>
+  <rect x="470" y="640" width="240" height="26" rx="8" fill="${p.mid}"/>
+  <rect x="484" y="666" width="22" height="134" fill="${p.ink}"/>
+  <rect x="674" y="666" width="22" height="134" fill="${p.ink}"/>
+  ${label(240, 946, opts.caption ?? "Cable station", p)}
+`);
+
+export const groupStudio = scene(WIDE, (p, opts = {}) => `
+  ${dotGrid(0, 0, 1440, 1080, p.ink, 34, 1.8, 0.12)}
+  <rect x="0" y="620" width="1440" height="460" fill="${p.soft}"/>
+
+  <!-- mirrored wall -->
+  <rect x="60" y="110" width="1320" height="440" fill="${p.tint}" stroke="${p.ink}" stroke-width="6"/>
+  <g stroke="${p.ink}" stroke-width="6">
+    <line x1="500" y1="110" x2="500" y2="550"/>
+    <line x1="940" y1="110" x2="940" y2="550"/>
+  </g>
+  <g stroke="${p.light}" stroke-width="18" opacity="0.5" stroke-linecap="round">
+    <line x1="140" y1="500" x2="380" y2="180"/>
+    <line x1="580" y1="500" x2="820" y2="180"/>
+    <line x1="1020" y1="500" x2="1260" y2="180"/>
+  </g>
+
+  <!-- mats laid out in two staggered rows -->
+  ${[0, 1].map((row) =>
+    [0, 1, 2, 3].map((i) => {
+      const x = 110 + i * 320 + row * 90;
+      const y = 660 + row * 170;
+      const fill = (i + row) % 2 === 0 ? p.mid : p.accent;
+      return `<rect x="${x}" y="${y}" width="250" height="120" rx="10" fill="${fill}" opacity="${row === 0 ? 0.9 : 0.75}"/>
+        <rect x="${x + 16}" y="${y + 16}" width="218" height="88" rx="6" fill="none" stroke="${p.bg}" stroke-width="5" opacity="0.55"/>`;
+    }).join(""),
+  ).join("")}
+
+  <!-- speaker on a stand and a wall clock -->
+  <rect x="1250" y="360" width="110" height="190" rx="8" fill="${p.ink}"/>
+  <circle cx="1305" cy="420" r="30" fill="${p.bg}"/>
+  <circle cx="1305" cy="500" r="16" fill="${p.accent}"/>
+  <rect x="1296" y="550" width="18" height="110" fill="${p.ink}"/>
+  <circle cx="180" cy="230" r="54" fill="${p.bg}" stroke="${p.ink}" stroke-width="10"/>
+  <path d="M180 196 V232 L208 246" fill="none" stroke="${p.accent}" stroke-width="10" stroke-linecap="round"/>
+  ${label(60, 966, opts.caption ?? "Group studio", p)}
+`);
+
+export const lockerRoom = scene(WIDE, (p, opts = {}) => `
+  ${dotGrid(0, 0, 1440, 1080, p.ink, 34, 1.8, 0.12)}
+  <rect x="0" y="800" width="1440" height="280" fill="${p.soft}"/>
+
+  <!-- locker bank -->
+  <rect x="90" y="150" width="900" height="650" fill="${p.mid}" stroke="${p.ink}" stroke-width="6"/>
+  ${[0, 1, 2].map((row) =>
+    [0, 1, 2, 3, 4].map((col) => {
+      const x = 110 + col * 176;
+      const y = 172 + row * 210;
+      return `<g>
+        <rect x="${x}" y="${y}" width="156" height="188" rx="4" fill="${p.light}" stroke="${p.ink}" stroke-width="5"/>
+        <g stroke="${p.ink}" stroke-width="4" opacity="0.35">
+          <line x1="${x + 22}" y1="${y + 26}" x2="${x + 134}" y2="${y + 26}"/>
+          <line x1="${x + 22}" y1="${y + 44}" x2="${x + 134}" y2="${y + 44}"/>
+        </g>
+        <rect x="${x + 122}" y="${y + 92}" width="14" height="46" rx="7" fill="${(row + col) % 4 === 0 ? p.accent : p.ink}"/>
+      </g>`;
+    }).join(""),
+  ).join("")}
+  <rect x="90" y="800" width="900" height="18" fill="${p.ink}" opacity="0.4"/>
+
+  <!-- changing bench and towel shelf -->
+  <rect x="1060" y="640" width="320" height="28" rx="8" fill="${p.ink}"/>
+  <rect x="1084" y="668" width="26" height="140" fill="${p.ink}"/>
+  <rect x="1330" y="668" width="26" height="140" fill="${p.ink}"/>
+  <rect x="1060" y="240" width="320" height="20" rx="6" fill="${p.ink}"/>
+  ${[0, 1, 2].map((i) => `<rect x="${1082 + i * 100}" y="176" width="80" height="64" rx="8" fill="${i === 1 ? p.accent : p.tint}" stroke="${p.ink}" stroke-width="5"/>`).join("")}
+  ${label(90, 946, opts.caption ?? "Locker room", p)}
+`);
+
+// Progress card used for the member before/after sliders. `state` sets whether
+// the series is flat (before) or moving, and `trend` sets which way it moves.
+export const progressChart = scene(WIDE, (p, opts = {}) => {
+  const isAfter = opts.state === "after";
+  const trend = opts.trend === "down" ? -1 : 1;
+  const flat = [0.46, 0.44, 0.47, 0.45, 0.48, 0.46];
+  const moving = flat.map((value, i) => value + trend * i * 0.082);
+  const series = isAfter ? moving : flat;
+
+  const plotX = 170;
+  const plotY = 300;
+  const plotW = 1100;
+  const plotH = 420;
+  const step = plotW / series.length;
+
+  return `
+  ${dotGrid(0, 0, 1440, 1080, p.ink, 34, 1.8, 0.1)}
+  <rect x="90" y="120" width="1260" height="840" rx="10" fill="${p.light}" stroke="${p.ink}" stroke-width="6"/>
+  <rect x="90" y="120" width="1260" height="96" fill="${p.ink}"/>
+  <text x="132" y="182" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="800" fill="${p.light}" letter-spacing="0.6">${(opts.title ?? "PROGRESS CARD").toUpperCase()}</text>
+  <rect x="1230" y="146" width="80" height="44" rx="6" fill="${p.accent}"/>
+
+  ${rules(plotX, plotY, plotW, 5, plotH / 4, p.ink, 0.16)}
+  <line x1="${plotX}" y1="${plotY + plotH}" x2="${plotX + plotW}" y2="${plotY + plotH}" stroke="${p.ink}" stroke-width="6"/>
+  <line x1="${plotX}" y1="${plotY}" x2="${plotX}" y2="${plotY + plotH}" stroke="${p.ink}" stroke-width="6"/>
+
+  ${series.map((value, i) => {
+    const clamped = Math.max(0.12, Math.min(0.96, value));
+    const height = clamped * plotH;
+    const x = plotX + i * step + step * 0.24;
+    const width = step * 0.52;
+    const y = plotY + plotH - height;
+    const isLast = i === series.length - 1;
+    return `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${width.toFixed(1)}" height="${height.toFixed(1)}" rx="6" fill="${isAfter && isLast ? p.accent : isAfter ? p.mid : p.tint}"/>`;
+  }).join("")}
+
+  <polyline points="${series.map((value, i) => {
+    const clamped = Math.max(0.12, Math.min(0.96, value));
+    return `${(plotX + i * step + step * 0.5).toFixed(1)},${(plotY + plotH - clamped * plotH).toFixed(1)}`;
+  }).join(" ")}" fill="none" stroke="${p.ink}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="${plotX}" y="780" width="440" height="18" rx="9" fill="${p.ink}" opacity="0.25"/>
+  <rect x="${plotX}" y="820" width="300" height="18" rx="9" fill="${p.ink}" opacity="0.18"/>
+  ${label(plotX, 872, opts.caption ?? (isAfter ? "After" : "Before"), p)}
+`;
+});

@@ -26,7 +26,8 @@
     "whatsappMessage": "Hi, I want a website for my Vijayawada business. My business type is:",
     "work": [
       { "name": "Sridevi Multispeciality Dental Care", "type": "Dental clinic", "url": "https://sridevi-dental.vercel.app", "tags": ["Google Business setup", "WhatsApp booking", "Mobile-first", "5-day delivery"], "previewTitle": "Gentle dentistry", "previewLocality": "Benz Circle · Since 2011", "previewColor": "#0F5257" },
-      { "name": "Krishna Path Labs", "type": "Diagnostic lab", "url": "https://krishna-path-labs.vercel.app", "tags": ["Google Business setup", "WhatsApp booking", "Mobile-first", "5-day delivery"], "previewTitle": "Reports in 6 hours", "previewLocality": "Governorpet · Since 2008", "previewColor": "#12294B" }
+      { "name": "Krishna Path Labs", "type": "Diagnostic lab", "url": "https://krishna-path-labs.vercel.app", "tags": ["Google Business setup", "WhatsApp booking", "Mobile-first", "5-day delivery"], "previewTitle": "Reports in 6 hours", "previewLocality": "Governorpet · Since 2008", "previewColor": "#12294B" },
+      { "name": "Zoom Fitness Studio", "type": "Gym and fitness studio", "url": "https://zoom-fitness.vercel.app", "tags": ["Google Business setup", "WhatsApp booking", "Class timetable", "5-day delivery"], "previewTitle": "Coached strength", "previewLocality": "Patamata · Since 2017", "previewColor": "#1F2933" }
     ],
     "included": ["Click-to-call on every page", "WhatsApp booking with prefilled messages", "Google Maps and directions", "Enquiry form to Google Sheet and WhatsApp", "Gallery and reviews section", "Google Business Profile setup and optimisation", "Review-request QR card", "Local SEO and schema", "Free .in domain for the first year", "Free hosting and SSL", "90+ PageSpeed target"],
     "packages": [
